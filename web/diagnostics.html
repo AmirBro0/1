@@ -105,7 +105,8 @@
         var greeting=doc.getElementById('typed-message'),greetingPresent=!!(greeting&&greeting.textContent.trim());
         write('Приветствие заполнено: '+bool(greetingPresent));
         var canvas=doc.getElementById('landscape');write('Canvas фона: '+(canvas?canvas.width+'×'+canvas.height:'отсутствует'));
-        var canvasInitialized=!!(canvas&&canvas.width===480&&canvas.height===270),backgroundDrawn=null;
+        var expectedSize=doc.documentElement.getAttribute('data-world')==='overworld'?[640,360]:[480,270];
+        var canvasInitialized=!!(canvas&&canvas.width===expectedSize[0]&&canvas.height===expectedSize[1]),backgroundDrawn=null;
         write('JS фона инициализирован: '+bool(canvasInitialized));
         if(canvas){var canvasStyle=win.getComputedStyle(canvas);write('Фон canvas (CSS): '+canvasStyle.backgroundImage);write('Фильтр canvas: '+canvasStyle.filter);}
         if(canvasInitialized){

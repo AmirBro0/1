@@ -6,18 +6,18 @@
       <stop offset=".47" stop-color="#e5be73"/>
       <stop offset="1" stop-color="#d7a75a"/>
     </linearGradient>
-    <path id="letters" fill-rule="evenodd" d="M19 30h58v8h8v34h-8v8H19v-8h-8V38h8zm14 15v20h30V45zm78-36h21v34h12V31h12V19h23v18h-12v12h-12v10h12v12h12v9h-24V68h-12V56h-11v24h-21zm102 21h58v8h8v34h-8v8h-58v-8h-8V38h8zm14 15v20h30V45z"/>
+    <path id="letters" fill-rule="evenodd" d="M19 9h58v8h8v55h-8v8H19v-8h-8V17h8zm14 20v31h30V29zm78-20h21v27h12V24h12V9h23v20h-12v12h-12v10h12v12h12v17h-24V68h-12V56h-11v24h-21zm102 0h58v8h8v55h-8v8h-58v-8h-8V17h8zm14 20v31h30V29z"/>
   </defs>
   <g transform="translate(12)">
-  <!-- Pixel-cut depth keeps the wordmark at home on the wooden sign. -->
-  <use href="#letters" transform="translate(6 9)" fill="#30291e" stroke="#30291e" stroke-width="6"/>
-  <use href="#letters" transform="translate(3 4)" fill="#956333" stroke="#583b25" stroke-width="5"/>
-  <use href="#letters" fill="url(#face)" stroke="#654726" stroke-width="3"/>
-  <path fill="#fff3cd" d="M19 30h58v4H19zm92-21h21v4h-21zm45 10h23v4h-23zm57 11h58v4h-58z"/>
-  <path fill="#ad7c3e" d="M19 76h58v4H19zm92 0h21v4h-21zm44 0h24v4h-24zm58 0h58v4h-58z"/>
-  <!-- Quiet camera-eye accents in the two o counters. -->
-  <path fill="#344a3b" d="M33 45h30v20H33zm194 0h30v20h-30z"/>
-  <path fill="#172b24" d="M45 45h8v20h-8zm194 0h8v20h-8z"/>
-  <path fill="#d4d7a2" d="M45 46h4v4h-4zm194 0h4v4h-4z"/>
+    <!-- Equally tall capital letters keep the original pixel-cut gold depth. -->
+    <use href="#letters" transform="translate(6 9)" fill="#30291e" stroke="#30291e" stroke-width="6"/>
+    <use href="#letters" transform="translate(3 4)" fill="#956333" stroke="#583b25" stroke-width="5"/>
+    <use href="#letters" fill="url(#face)" stroke="#654726" stroke-width="3"/>
+    <path fill="#fff3cd" d="M19 9h58v4H19zm92 0h21v4h-21zm45 0h23v4h-23zm57 0h58v4h-58z"/>
+    <path fill="#ad7c3e" d="M19 76h58v4H19zm92 0h21v4h-21zm44 0h24v4h-24zm58 0h58v4h-58z"/>
+    <!-- Quiet camera-eye accents remain centered inside both capital O counters. -->
+    <path fill="#344a3b" d="M33 29h30v31H33zm194 0h30v31h-30z"/>
+    <path fill="#172b24" d="M45 29h8v31h-8zm194 0h8v31h-8z"/>
+    <path fill="#d4d7a2" d="M45 31h4v4h-4zm194 0h4v4h-4z"/>
   </g>
 </svg>

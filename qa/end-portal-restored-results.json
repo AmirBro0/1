@@ -1,0 +1,142 @@
+{
+  "synthetic_api_only": true,
+  "cases_passed": 8,
+  "results": [
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "reduced_motion": false,
+      "cases": [
+        {
+          "destination": "end",
+          "duration_ms": 2289,
+          "phases": [
+            "reveal",
+            "approach",
+            "crossing",
+            "destination",
+            "exit"
+          ],
+          "max_colors": 30,
+          "skip": false,
+          "reduced": false,
+          "passed": true
+        },
+        {
+          "destination": "nether",
+          "duration_ms": 2033,
+          "phases": [
+            "reveal",
+            "approach",
+            "crossing",
+            "destination",
+            "exit"
+          ],
+          "max_colors": 30,
+          "skip": false,
+          "reduced": false,
+          "passed": true
+        },
+        {
+          "destination": "end",
+          "duration_ms": 443,
+          "phases": [
+            "reveal",
+            "approach"
+          ],
+          "max_colors": 30,
+          "skip": true,
+          "reduced": false,
+          "passed": true
+        }
+      ],
+      "errors": []
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "reduced_motion": false,
+      "cases": [
+        {
+          "destination": "end",
+          "duration_ms": 2028,
+          "phases": [
+            "reveal",
+            "approach",
+            "crossing",
+            "destination",
+            "exit"
+          ],
+          "max_colors": 30,
+          "skip": false,
+          "reduced": false,
+          "passed": true
+        },
+        {
+          "destination": "nether",
+          "duration_ms": 2009,
+          "phases": [
+            "reveal",
+            "approach",
+            "crossing",
+            "destination",
+            "exit"
+          ],
+          "max_colors": 30,
+          "skip": false,
+          "reduced": false,
+          "passed": true
+        },
+        {
+          "destination": "end",
+          "duration_ms": 340,
+          "phases": [
+            "reveal",
+            "approach"
+          ],
+          "max_colors": 30,
+          "skip": true,
+          "reduced": false,
+          "passed": true
+        }
+      ],
+      "errors": []
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "reduced_motion": true,
+      "cases": [
+        {
+          "destination": "end",
+          "duration_ms": 236,
+          "phases": [
+            "reveal"
+          ],
+          "max_colors": 1,
+          "skip": false,
+          "reduced": true,
+          "passed": true
+        },
+        {
+          "destination": "nether",
+          "duration_ms": 255,
+          "phases": [
+            "reveal"
+          ],
+          "max_colors": 1,
+          "skip": false,
+          "reduced": true,
+          "passed": true
+        }
+      ],
+      "errors": []
+    }
+  ]
+}

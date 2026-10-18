@@ -7,7 +7,7 @@
     "Pixel font is loaded and used by the body",
     "Wooden sign texture resolves inside the current release",
     "Overworld CSS background resolves inside the current release",
-    "JavaScript painted the detailed 480×270 background",
+    "JavaScript painted the original 640×360 Overworld background",
     "The released oko wordmark loaded successfully",
     "The current wordmark contains its gold face colors",
     "All styles resolve inside one frontend release directory",
@@ -30,277 +30,277 @@
   "bad_responses": [],
   "release_assets": [
     {
-      "path": "/_ui/3b2de88c6daaff4a/styles.css",
+      "path": "/_ui/97634122dc218c01/styles.css",
       "status": 200,
       "type": "stylesheet",
       "content_type": "text/css; charset=utf-8"
     },
     {
-      "path": "/_ui/3b2de88c6daaff4a/worlds-refresh.css",
+      "path": "/_ui/97634122dc218c01/controls-refresh.css",
       "status": 200,
       "type": "stylesheet",
       "content_type": "text/css; charset=utf-8"
     },
     {
-      "path": "/_ui/3b2de88c6daaff4a/branding.css",
+      "path": "/_ui/97634122dc218c01/branding.css",
       "status": 200,
       "type": "stylesheet",
       "content_type": "text/css; charset=utf-8"
     },
     {
-      "path": "/_ui/3b2de88c6daaff4a/ui-refresh.css",
+      "path": "/_ui/97634122dc218c01/worlds-refresh.css",
       "status": 200,
       "type": "stylesheet",
       "content_type": "text/css; charset=utf-8"
     },
     {
-      "path": "/_ui/3b2de88c6daaff4a/controls-refresh.css",
-      "status": 200,
-      "type": "stylesheet",
-      "content_type": "text/css; charset=utf-8"
-    },
-    {
-      "path": "/_ui/3b2de88c6daaff4a/assets/fonts/PressStart2P-Regular.ttf",
+      "path": "/_ui/97634122dc218c01/assets/fonts/PressStart2P-Regular.ttf",
       "status": 200,
       "type": "font",
       "content_type": "font/ttf"
     },
     {
-      "path": "/_ui/3b2de88c6daaff4a/assets/branding/oko-wordmark.svg",
+      "path": "/_ui/97634122dc218c01/ui-refresh.css",
+      "status": 200,
+      "type": "stylesheet",
+      "content_type": "text/css; charset=utf-8"
+    },
+    {
+      "path": "/_ui/97634122dc218c01/assets/branding/oko-wordmark.svg",
       "status": 200,
       "type": "image",
       "content_type": "image/svg+xml"
     },
     {
-      "path": "/_ui/3b2de88c6daaff4a/app.js",
-      "status": 200,
-      "type": "script",
-      "content_type": "application/javascript"
-    },
-    {
-      "path": "/_ui/3b2de88c6daaff4a/assets/textures/wood.svg",
+      "path": "/_ui/97634122dc218c01/assets/textures/wood.svg",
       "status": 200,
       "type": "image",
       "content_type": "image/svg+xml"
     },
     {
-      "path": "/_ui/3b2de88c6daaff4a/config.js",
+      "path": "/_ui/97634122dc218c01/app.js",
       "status": 200,
       "type": "script",
       "content_type": "application/javascript"
     },
     {
-      "path": "/_ui/3b2de88c6daaff4a/chat.js",
+      "path": "/_ui/97634122dc218c01/worlds.js",
       "status": 200,
       "type": "script",
       "content_type": "application/javascript"
     },
     {
-      "path": "/_ui/3b2de88c6daaff4a/player.js",
+      "path": "/_ui/97634122dc218c01/audio.js",
       "status": 200,
       "type": "script",
       "content_type": "application/javascript"
     },
     {
-      "path": "/_ui/3b2de88c6daaff4a/report.js",
-      "status": 200,
-      "type": "script",
-      "content_type": "application/javascript"
-    },
-    {
-      "path": "/_ui/3b2de88c6daaff4a/worlds.js",
-      "status": 200,
-      "type": "script",
-      "content_type": "application/javascript"
-    },
-    {
-      "path": "/_ui/3b2de88c6daaff4a/audio.js",
-      "status": 200,
-      "type": "script",
-      "content_type": "application/javascript"
-    },
-    {
-      "path": "/_ui/3b2de88c6daaff4a/assets/worlds/overworld.png",
+      "path": "/_ui/97634122dc218c01/assets/worlds/overworld.png",
       "status": 200,
       "type": "image",
       "content_type": "image/png"
     },
     {
-      "path": "/_ui/3b2de88c6daaff4a/credits.js",
+      "path": "/_ui/97634122dc218c01/chat.js",
       "status": 200,
       "type": "script",
       "content_type": "application/javascript"
     },
     {
-      "path": "/_ui/3b2de88c6daaff4a/analysis-scope.js",
+      "path": "/_ui/97634122dc218c01/config.js",
       "status": 200,
       "type": "script",
       "content_type": "application/javascript"
     },
     {
-      "path": "/_ui/3b2de88c6daaff4a/dom.js",
+      "path": "/_ui/97634122dc218c01/player.js",
       "status": 200,
       "type": "script",
       "content_type": "application/javascript"
     },
     {
-      "path": "/_ui/3b2de88c6daaff4a/archive.js",
+      "path": "/_ui/97634122dc218c01/archive.js",
       "status": 200,
       "type": "script",
       "content_type": "application/javascript"
     },
     {
-      "path": "/_ui/3b2de88c6daaff4a/controls.js",
+      "path": "/_ui/97634122dc218c01/credits.js",
       "status": 200,
       "type": "script",
       "content_type": "application/javascript"
     },
     {
-      "path": "/_ui/3b2de88c6daaff4a/assets/worlds/end.png",
+      "path": "/_ui/97634122dc218c01/report.js",
+      "status": 200,
+      "type": "script",
+      "content_type": "application/javascript"
+    },
+    {
+      "path": "/_ui/97634122dc218c01/dom.js",
+      "status": 200,
+      "type": "script",
+      "content_type": "application/javascript"
+    },
+    {
+      "path": "/_ui/97634122dc218c01/analysis-scope.js",
+      "status": 200,
+      "type": "script",
+      "content_type": "application/javascript"
+    },
+    {
+      "path": "/_ui/97634122dc218c01/controls.js",
+      "status": 200,
+      "type": "script",
+      "content_type": "application/javascript"
+    },
+    {
+      "path": "/_ui/97634122dc218c01/assets/worlds/nether.png",
       "status": 200,
       "type": "image",
       "content_type": "image/png"
     },
     {
-      "path": "/_ui/3b2de88c6daaff4a/assets/worlds/nether.png",
+      "path": "/_ui/97634122dc218c01/assets/worlds/end.png",
       "status": 200,
       "type": "image",
       "content_type": "image/png"
     },
     {
-      "path": "/_ui/3b2de88c6daaff4a/assets/fonts/PressStart2P-Regular.ttf",
+      "path": "/_ui/97634122dc218c01/controls-refresh.css",
+      "status": 200,
+      "type": "stylesheet",
+      "content_type": "text/css; charset=utf-8"
+    },
+    {
+      "path": "/_ui/97634122dc218c01/worlds-refresh.css",
+      "status": 200,
+      "type": "stylesheet",
+      "content_type": "text/css; charset=utf-8"
+    },
+    {
+      "path": "/_ui/97634122dc218c01/styles.css",
+      "status": 200,
+      "type": "stylesheet",
+      "content_type": "text/css; charset=utf-8"
+    },
+    {
+      "path": "/_ui/97634122dc218c01/ui-refresh.css",
+      "status": 200,
+      "type": "stylesheet",
+      "content_type": "text/css; charset=utf-8"
+    },
+    {
+      "path": "/_ui/97634122dc218c01/branding.css",
+      "status": 200,
+      "type": "stylesheet",
+      "content_type": "text/css; charset=utf-8"
+    },
+    {
+      "path": "/_ui/97634122dc218c01/assets/branding/oko-wordmark.svg",
+      "status": 200,
+      "type": "image",
+      "content_type": "image/svg+xml"
+    },
+    {
+      "path": "/_ui/97634122dc218c01/assets/fonts/PressStart2P-Regular.ttf",
       "status": 200,
       "type": "font",
       "content_type": "font/ttf"
     },
     {
-      "path": "/_ui/3b2de88c6daaff4a/controls-refresh.css",
+      "path": "/_ui/97634122dc218c01/app.js",
       "status": 200,
-      "type": "stylesheet",
-      "content_type": "text/css; charset=utf-8"
+      "type": "script",
+      "content_type": "application/javascript"
     },
     {
-      "path": "/_ui/3b2de88c6daaff4a/styles.css",
-      "status": 200,
-      "type": "stylesheet",
-      "content_type": "text/css; charset=utf-8"
-    },
-    {
-      "path": "/_ui/3b2de88c6daaff4a/ui-refresh.css",
-      "status": 200,
-      "type": "stylesheet",
-      "content_type": "text/css; charset=utf-8"
-    },
-    {
-      "path": "/_ui/3b2de88c6daaff4a/branding.css",
-      "status": 200,
-      "type": "stylesheet",
-      "content_type": "text/css; charset=utf-8"
-    },
-    {
-      "path": "/_ui/3b2de88c6daaff4a/worlds-refresh.css",
-      "status": 200,
-      "type": "stylesheet",
-      "content_type": "text/css; charset=utf-8"
-    },
-    {
-      "path": "/_ui/3b2de88c6daaff4a/assets/branding/oko-wordmark.svg",
+      "path": "/_ui/97634122dc218c01/assets/textures/wood.svg",
       "status": 200,
       "type": "image",
       "content_type": "image/svg+xml"
     },
     {
-      "path": "/_ui/3b2de88c6daaff4a/app.js",
+      "path": "/_ui/97634122dc218c01/config.js",
       "status": 200,
       "type": "script",
       "content_type": "application/javascript"
     },
     {
-      "path": "/_ui/3b2de88c6daaff4a/assets/textures/wood.svg",
-      "status": 200,
-      "type": "image",
-      "content_type": "image/svg+xml"
-    },
-    {
-      "path": "/_ui/3b2de88c6daaff4a/config.js",
+      "path": "/_ui/97634122dc218c01/worlds.js",
       "status": 200,
       "type": "script",
       "content_type": "application/javascript"
     },
     {
-      "path": "/_ui/3b2de88c6daaff4a/audio.js",
+      "path": "/_ui/97634122dc218c01/player.js",
       "status": 200,
       "type": "script",
       "content_type": "application/javascript"
     },
     {
-      "path": "/_ui/3b2de88c6daaff4a/worlds.js",
+      "path": "/_ui/97634122dc218c01/chat.js",
       "status": 200,
       "type": "script",
       "content_type": "application/javascript"
     },
     {
-      "path": "/_ui/3b2de88c6daaff4a/chat.js",
+      "path": "/_ui/97634122dc218c01/audio.js",
       "status": 200,
       "type": "script",
       "content_type": "application/javascript"
     },
     {
-      "path": "/_ui/3b2de88c6daaff4a/player.js",
+      "path": "/_ui/97634122dc218c01/archive.js",
       "status": 200,
       "type": "script",
       "content_type": "application/javascript"
     },
     {
-      "path": "/_ui/3b2de88c6daaff4a/report.js",
+      "path": "/_ui/97634122dc218c01/dom.js",
       "status": 200,
       "type": "script",
       "content_type": "application/javascript"
     },
     {
-      "path": "/_ui/3b2de88c6daaff4a/archive.js",
+      "path": "/_ui/97634122dc218c01/report.js",
       "status": 200,
       "type": "script",
       "content_type": "application/javascript"
     },
     {
-      "path": "/_ui/3b2de88c6daaff4a/dom.js",
+      "path": "/_ui/97634122dc218c01/analysis-scope.js",
       "status": 200,
       "type": "script",
       "content_type": "application/javascript"
     },
     {
-      "path": "/_ui/3b2de88c6daaff4a/credits.js",
+      "path": "/_ui/97634122dc218c01/credits.js",
       "status": 200,
       "type": "script",
       "content_type": "application/javascript"
     },
     {
-      "path": "/_ui/3b2de88c6daaff4a/analysis-scope.js",
-      "status": 200,
-      "type": "script",
-      "content_type": "application/javascript"
-    },
-    {
-      "path": "/_ui/3b2de88c6daaff4a/controls.js",
-      "status": 200,
-      "type": "script",
-      "content_type": "application/javascript"
-    },
-    {
-      "path": "/_ui/3b2de88c6daaff4a/assets/worlds/overworld.png",
+      "path": "/_ui/97634122dc218c01/assets/worlds/overworld.png",
       "status": 200,
       "type": "image",
       "content_type": "image/png"
     },
     {
-      "path": "/_ui/3b2de88c6daaff4a/assets/worlds/nether.png",
+      "path": "/_ui/97634122dc218c01/controls.js",
+      "status": 200,
+      "type": "script",
+      "content_type": "application/javascript"
+    },
+    {
+      "path": "/_ui/97634122dc218c01/assets/worlds/nether.png",
       "status": 200,
       "type": "image",
       "content_type": "image/png"
     },
     {
-      "path": "/_ui/3b2de88c6daaff4a/assets/worlds/end.png",
+      "path": "/_ui/97634122dc218c01/assets/worlds/end.png",
       "status": 200,
       "type": "image",
       "content_type": "image/png"
@@ -326,17 +326,17 @@
     "/static/worlds-refresh.css",
     "/static/worlds.js"
   ],
-  "revision": "3b2de88c6daaff4a",
+  "revision": "97634122dc218c01",
   "appearance": {
     "font": "Pixel, monospace",
     "fontLoaded": true,
-    "wood": "url(\"http://127.0.0.1:52339/_ui/3b2de88c6daaff4a/assets/textures/wood.svg\")",
-    "fallback": "url(\"http://127.0.0.1:52339/_ui/3b2de88c6daaff4a/assets/worlds/overworld.png\")",
+    "wood": "url(\"http://127.0.0.1:60615/_ui/97634122dc218c01/assets/textures/wood.svg\")",
+    "fallback": "url(\"http://127.0.0.1:60615/_ui/97634122dc218c01/assets/worlds/overworld.png\")",
     "canvas": [
-      480,
-      270
+      640,
+      360
     ],
-    "logo": "http://127.0.0.1:52339/_ui/3b2de88c6daaff4a/assets/branding/oko-wordmark.svg",
+    "logo": "http://127.0.0.1:60615/_ui/97634122dc218c01/assets/branding/oko-wordmark.svg",
     "logoLoaded": true,
     "logoIntrinsicSize": [
       300,
@@ -344,21 +344,21 @@
     ],
     "greeting": "> Добро пожаловать на пост наблюдения.",
     "styles": [
-      "http://127.0.0.1:52339/_ui/3b2de88c6daaff4a/styles.css",
-      "http://127.0.0.1:52339/_ui/3b2de88c6daaff4a/controls-refresh.css",
-      "http://127.0.0.1:52339/_ui/3b2de88c6daaff4a/worlds-refresh.css",
-      "http://127.0.0.1:52339/_ui/3b2de88c6daaff4a/ui-refresh.css",
-      "http://127.0.0.1:52339/_ui/3b2de88c6daaff4a/branding.css"
+      "http://127.0.0.1:60615/_ui/97634122dc218c01/styles.css",
+      "http://127.0.0.1:60615/_ui/97634122dc218c01/controls-refresh.css",
+      "http://127.0.0.1:60615/_ui/97634122dc218c01/worlds-refresh.css",
+      "http://127.0.0.1:60615/_ui/97634122dc218c01/ui-refresh.css",
+      "http://127.0.0.1:60615/_ui/97634122dc218c01/branding.css"
     ],
     "scripts": [
-      "http://127.0.0.1:52339/_ui/3b2de88c6daaff4a/app.js"
+      "http://127.0.0.1:60615/_ui/97634122dc218c01/app.js"
     ],
     "configuredAssets": [
-      "http://127.0.0.1:52339/_ui/3b2de88c6daaff4a/assets/music/overworld.m4a",
-      "http://127.0.0.1:52339/_ui/3b2de88c6daaff4a/assets/music/netherworld.m4a",
-      "http://127.0.0.1:52339/_ui/3b2de88c6daaff4a/assets/music/end.m4a",
-      "http://127.0.0.1:52339/_ui/3b2de88c6daaff4a/assets/music/titles.m4a",
-      "http://127.0.0.1:52339/_ui/3b2de88c6daaff4a/content/credits.json"
+      "http://127.0.0.1:60615/_ui/97634122dc218c01/assets/music/overworld.m4a",
+      "http://127.0.0.1:60615/_ui/97634122dc218c01/assets/music/netherworld.m4a",
+      "http://127.0.0.1:60615/_ui/97634122dc218c01/assets/music/end.m4a",
+      "http://127.0.0.1:60615/_ui/97634122dc218c01/assets/music/titles.m4a",
+      "http://127.0.0.1:60615/_ui/97634122dc218c01/content/credits.json"
     ]
   },
   "proxy_requests": [
@@ -368,11 +368,11 @@
     },
     {
       "phase": "warm",
-      "path": "/static/branding.css"
+      "path": "/static/controls-refresh.css"
     },
     {
       "phase": "warm",
-      "path": "/static/controls-refresh.css"
+      "path": "/static/branding.css"
     },
     {
       "phase": "warm",
@@ -408,11 +408,11 @@
     },
     {
       "phase": "warm",
-      "path": "/static/config.js"
+      "path": "/static/controls.js"
     },
     {
       "phase": "warm",
-      "path": "/static/controls.js"
+      "path": "/static/config.js"
     },
     {
       "phase": "warm",
@@ -452,87 +452,91 @@
     },
     {
       "phase": "release",
-      "path": "/_ui/3b2de88c6daaff4a/assets/fonts/PressStart2P-Regular.ttf"
+      "path": "/_ui/97634122dc218c01/styles.css"
     },
     {
       "phase": "release",
-      "path": "/_ui/3b2de88c6daaff4a/styles.css"
+      "path": "/_ui/97634122dc218c01/controls-refresh.css"
     },
     {
       "phase": "release",
-      "path": "/_ui/3b2de88c6daaff4a/controls-refresh.css"
+      "path": "/_ui/97634122dc218c01/worlds-refresh.css"
     },
     {
       "phase": "release",
-      "path": "/_ui/3b2de88c6daaff4a/worlds-refresh.css"
+      "path": "/_ui/97634122dc218c01/assets/fonts/PressStart2P-Regular.ttf"
     },
     {
       "phase": "release",
-      "path": "/_ui/3b2de88c6daaff4a/ui-refresh.css"
+      "path": "/_ui/97634122dc218c01/ui-refresh.css"
     },
     {
       "phase": "release",
-      "path": "/_ui/3b2de88c6daaff4a/branding.css"
+      "path": "/_ui/97634122dc218c01/branding.css"
     },
     {
       "phase": "release",
-      "path": "/_ui/3b2de88c6daaff4a/app.js"
+      "path": "/_ui/97634122dc218c01/app.js"
     },
     {
       "phase": "release",
-      "path": "/_ui/3b2de88c6daaff4a/assets/branding/oko-wordmark.svg"
+      "path": "/_ui/97634122dc218c01/assets/branding/oko-wordmark.svg"
     },
     {
       "phase": "release",
-      "path": "/_ui/3b2de88c6daaff4a/assets/worlds/overworld.png"
+      "path": "/_ui/97634122dc218c01/assets/worlds/overworld.png"
     },
     {
       "phase": "release",
-      "path": "/_ui/3b2de88c6daaff4a/assets/textures/wood.svg"
+      "path": "/_ui/97634122dc218c01/assets/textures/wood.svg"
     },
     {
       "phase": "release",
-      "path": "/_ui/3b2de88c6daaff4a/config.js"
+      "path": "/_ui/97634122dc218c01/worlds.js"
     },
     {
       "phase": "release",
-      "path": "/_ui/3b2de88c6daaff4a/audio.js"
+      "path": "/_ui/97634122dc218c01/player.js"
     },
     {
       "phase": "release",
-      "path": "/_ui/3b2de88c6daaff4a/worlds.js"
+      "path": "/_ui/97634122dc218c01/audio.js"
     },
     {
       "phase": "release",
-      "path": "/_ui/3b2de88c6daaff4a/player.js"
+      "path": "/_ui/97634122dc218c01/config.js"
     },
     {
       "phase": "release",
-      "path": "/_ui/3b2de88c6daaff4a/chat.js"
+      "path": "/_ui/97634122dc218c01/chat.js"
     },
     {
       "phase": "release",
-      "path": "/_ui/3b2de88c6daaff4a/report.js"
+      "path": "/_ui/97634122dc218c01/report.js"
     },
     {
       "phase": "release",
-      "path": "/_ui/3b2de88c6daaff4a/archive.js"
+      "path": "/_ui/97634122dc218c01/archive.js"
     },
     {
       "phase": "release",
-      "path": "/_ui/3b2de88c6daaff4a/credits.js"
+      "path": "/_ui/97634122dc218c01/credits.js"
     },
     {
       "phase": "release",
-      "path": "/_ui/3b2de88c6daaff4a/dom.js"
+      "path": "/_ui/97634122dc218c01/dom.js"
     },
     {
       "phase": "release",
-      "path": "/_ui/3b2de88c6daaff4a/analysis-scope.js"
+      "path": "/_ui/97634122dc218c01/analysis-scope.js"
     },
     {
       "phase": "release",
-      "path": "/_ui/3b2de88c6daaff4a/controls.js"
+      "path": "/_ui/97634122dc218c01/controls.js"
+    },
+    {
+      "phase": "release",
+      "path": "/_ui/97634122dc218c01/assets/worlds/nether.png"
     },
     {
       "phase": "release",
@@ -540,11 +544,7 @@
     },
     {
       "phase": "release",
-      "path": "/_ui/3b2de88c6daaff4a/assets/worlds/nether.png"
-    },
-    {
-      "phase": "release",
-      "path": "/_ui/3b2de88c6daaff4a/assets/worlds/end.png"
+      "path": "/_ui/97634122dc218c01/assets/worlds/end.png"
     },
     {
       "phase": "release",
@@ -556,99 +556,99 @@
     },
     {
       "phase": "release",
-      "path": "/_ui/3b2de88c6daaff4a/assets/fonts/PressStart2P-Regular.ttf"
+      "path": "/_ui/97634122dc218c01/controls-refresh.css"
     },
     {
       "phase": "release",
-      "path": "/_ui/3b2de88c6daaff4a/styles.css"
+      "path": "/_ui/97634122dc218c01/styles.css"
     },
     {
       "phase": "release",
-      "path": "/_ui/3b2de88c6daaff4a/controls-refresh.css"
+      "path": "/_ui/97634122dc218c01/worlds-refresh.css"
     },
     {
       "phase": "release",
-      "path": "/_ui/3b2de88c6daaff4a/worlds-refresh.css"
+      "path": "/_ui/97634122dc218c01/ui-refresh.css"
     },
     {
       "phase": "release",
-      "path": "/_ui/3b2de88c6daaff4a/ui-refresh.css"
+      "path": "/_ui/97634122dc218c01/branding.css"
     },
     {
       "phase": "release",
-      "path": "/_ui/3b2de88c6daaff4a/branding.css"
+      "path": "/_ui/97634122dc218c01/assets/fonts/PressStart2P-Regular.ttf"
     },
     {
       "phase": "release",
-      "path": "/_ui/3b2de88c6daaff4a/app.js"
+      "path": "/_ui/97634122dc218c01/app.js"
     },
     {
       "phase": "release",
-      "path": "/_ui/3b2de88c6daaff4a/assets/branding/oko-wordmark.svg"
+      "path": "/_ui/97634122dc218c01/assets/branding/oko-wordmark.svg"
     },
     {
       "phase": "release",
-      "path": "/_ui/3b2de88c6daaff4a/assets/worlds/overworld.png"
+      "path": "/_ui/97634122dc218c01/assets/worlds/overworld.png"
     },
     {
       "phase": "release",
-      "path": "/_ui/3b2de88c6daaff4a/assets/textures/wood.svg"
+      "path": "/_ui/97634122dc218c01/assets/textures/wood.svg"
     },
     {
       "phase": "release",
-      "path": "/_ui/3b2de88c6daaff4a/config.js"
+      "path": "/_ui/97634122dc218c01/config.js"
     },
     {
       "phase": "release",
-      "path": "/_ui/3b2de88c6daaff4a/audio.js"
+      "path": "/_ui/97634122dc218c01/audio.js"
     },
     {
       "phase": "release",
-      "path": "/_ui/3b2de88c6daaff4a/worlds.js"
+      "path": "/_ui/97634122dc218c01/worlds.js"
     },
     {
       "phase": "release",
-      "path": "/_ui/3b2de88c6daaff4a/player.js"
+      "path": "/_ui/97634122dc218c01/player.js"
     },
     {
       "phase": "release",
-      "path": "/_ui/3b2de88c6daaff4a/chat.js"
+      "path": "/_ui/97634122dc218c01/chat.js"
     },
     {
       "phase": "release",
-      "path": "/_ui/3b2de88c6daaff4a/report.js"
+      "path": "/_ui/97634122dc218c01/report.js"
     },
     {
       "phase": "release",
-      "path": "/_ui/3b2de88c6daaff4a/archive.js"
+      "path": "/_ui/97634122dc218c01/archive.js"
     },
     {
       "phase": "release",
-      "path": "/_ui/3b2de88c6daaff4a/credits.js"
+      "path": "/_ui/97634122dc218c01/credits.js"
     },
     {
       "phase": "release",
-      "path": "/_ui/3b2de88c6daaff4a/dom.js"
+      "path": "/_ui/97634122dc218c01/dom.js"
     },
     {
       "phase": "release",
-      "path": "/_ui/3b2de88c6daaff4a/analysis-scope.js"
+      "path": "/_ui/97634122dc218c01/analysis-scope.js"
     },
     {
       "phase": "release",
-      "path": "/_ui/3b2de88c6daaff4a/controls.js"
+      "path": "/_ui/97634122dc218c01/controls.js"
     },
     {
       "phase": "release",
-      "path": "/_ui/3b2de88c6daaff4a/assets/worlds/nether.png"
-    },
-    {
-      "phase": "release",
-      "path": "/_ui/3b2de88c6daaff4a/assets/worlds/end.png"
+      "path": "/_ui/97634122dc218c01/assets/worlds/nether.png"
     },
     {
       "phase": "release",
       "path": "/ui/v1/session"
+    },
+    {
+      "phase": "release",
+      "path": "/_ui/97634122dc218c01/assets/worlds/end.png"
     },
     {
       "phase": "release",
@@ -660,43 +660,43 @@
     },
     {
       "phase": "release",
-      "path": "/_ui/3b2de88c6daaff4a/assets/fonts/PressStart2P-Regular.ttf"
+      "path": "/_ui/97634122dc218c01/assets/fonts/PressStart2P-Regular.ttf"
     },
     {
       "phase": "release",
-      "path": "/_ui/3b2de88c6daaff4a/styles.css"
+      "path": "/_ui/97634122dc218c01/styles.css"
     },
     {
       "phase": "release",
-      "path": "/_ui/3b2de88c6daaff4a/controls-refresh.css"
+      "path": "/_ui/97634122dc218c01/worlds-refresh.css"
     },
     {
       "phase": "release",
-      "path": "/_ui/3b2de88c6daaff4a/worlds-refresh.css"
+      "path": "/_ui/97634122dc218c01/ui-refresh.css"
     },
     {
       "phase": "release",
-      "path": "/_ui/3b2de88c6daaff4a/ui-refresh.css"
+      "path": "/_ui/97634122dc218c01/controls-refresh.css"
     },
     {
       "phase": "release",
-      "path": "/_ui/3b2de88c6daaff4a/branding.css"
+      "path": "/_ui/97634122dc218c01/branding.css"
     },
     {
       "phase": "release",
-      "path": "/_ui/3b2de88c6daaff4a/assets/branding/oko-wordmark.svg"
+      "path": "/_ui/97634122dc218c01/assets/branding/oko-wordmark.svg"
     },
     {
       "phase": "release",
-      "path": "/_ui/3b2de88c6daaff4a/end-scene.svg"
+      "path": "/_ui/97634122dc218c01/end-scene.svg"
     },
     {
       "phase": "release",
-      "path": "/_ui/3b2de88c6daaff4a/assets/worlds/overworld.png"
+      "path": "/_ui/97634122dc218c01/assets/worlds/overworld.png"
     },
     {
       "phase": "release",
-      "path": "/_ui/3b2de88c6daaff4a/assets/textures/wood.svg"
+      "path": "/_ui/97634122dc218c01/assets/textures/wood.svg"
     },
     {
       "phase": "release",

@@ -1,0 +1,650 @@
+[
+  {
+    "viewport": [
+      1920,
+      1080
+    ],
+    "document": [
+      1920,
+      1080
+    ],
+    "boxes": {
+      "sign": {
+        "x": 520,
+        "y": 316.09375,
+        "width": 880,
+        "height": 264.796875,
+        "bottom": 580.890625,
+        "right": 1400,
+        "font": "11px",
+        "text": "КАССОВАЯ ДИСЦИПЛИНА\n\noko\nВИДЕО ПОД КОНТРОЛЕМ"
+      },
+      "rig": {
+        "x": 520,
+        "y": 255.09375,
+        "width": 880,
+        "height": 336,
+        "bottom": 591.09375,
+        "right": 1400,
+        "font": "11px",
+        "text": "КАССОВАЯ ДИСЦИПЛИНА\n\noko\nВИДЕО ПОД КОНТРОЛЕМ"
+      },
+      "greeting": {
+        "x": 490,
+        "y": 609.09375,
+        "width": 940,
+        "height": 34,
+        "bottom": 643.09375,
+        "right": 1430,
+        "font": "12px",
+        "text": "> Добро пожаловать на пост наблюдения."
+      },
+      "form": {
+        "x": 680,
+        "y": 665.09375,
+        "width": 560,
+        "height": 213.59375,
+        "bottom": 878.6875,
+        "right": 1240,
+        "font": "11px",
+        "text": "КЛЮЧ ДОСТУПА\nSTART ANALYSIS\nДалее — загрузка видео →"
+      },
+      "footer": {
+        "x": 0,
+        "y": 1037.90625,
+        "width": 1920,
+        "height": 17.09375,
+        "bottom": 1055,
+        "right": 1920,
+        "font": "9px",
+        "text": "НОВЫЙ МИР. ТОЧНЫЙ ВЗГЛЯД."
+      },
+      "logo": {
+        "x": 720,
+        "y": 377.09375,
+        "width": 480,
+        "height": 144,
+        "bottom": 521.09375,
+        "right": 1200,
+        "font": "48px",
+        "text": "oko"
+      },
+      "eyebrow": {
+        "x": 490,
+        "y": 217.296875,
+        "width": 940,
+        "height": 19.796875,
+        "bottom": 237.09375,
+        "right": 1430,
+        "font": "11px",
+        "text": "ВАШ ПОСТ НАБЛЮДЕНИЯ"
+      },
+      "overline": {
+        "x": 553,
+        "y": 347.09375,
+        "width": 814,
+        "height": 18,
+        "bottom": 365.09375,
+        "right": 1367,
+        "font": "10px",
+        "text": "КАССОВАЯ ДИСЦИПЛИНА"
+      },
+      "subtitle": {
+        "x": 846,
+        "y": 534.09375,
+        "width": 228,
+        "height": 10,
+        "bottom": 544.09375,
+        "right": 1074,
+        "font": "10px",
+        "text": "ВИДЕО ПОД КОНТРОЛЕМ"
+      },
+      "label": {
+        "x": 680,
+        "y": 665.09375,
+        "width": 560,
+        "height": 19.796875,
+        "bottom": 684.890625,
+        "right": 1240,
+        "font": "11px",
+        "text": "КЛЮЧ ДОСТУПА"
+      },
+      "input": {
+        "x": 717,
+        "y": 698.890625,
+        "width": 476,
+        "height": 60,
+        "bottom": 758.890625,
+        "right": 1193,
+        "font": "13px",
+        "text": ""
+      },
+      "start": {
+        "x": 680,
+        "y": 778.890625,
+        "width": 560,
+        "height": 66,
+        "bottom": 844.890625,
+        "right": 1240,
+        "font": "17px",
+        "text": "START ANALYSIS"
+      },
+      "hint": {
+        "x": 680,
+        "y": 858.890625,
+        "width": 560,
+        "height": 19.796875,
+        "bottom": 878.6875,
+        "right": 1240,
+        "font": "11px",
+        "text": "Далее — загрузка видео →"
+      },
+      "navbrand": {
+        "x": 83,
+        "y": 23.296875,
+        "width": 70,
+        "height": 23.390625,
+        "bottom": 46.6875,
+        "right": 153,
+        "font": "13px",
+        "text": "oko"
+      }
+    },
+    "outliers": [],
+    "tests": {
+      "noHorizontalOverflow": true,
+      "signAboveGreeting": true,
+      "greetingAboveForm": true,
+      "footerBelowForm": true
+    },
+    "fontLoaded": true,
+    "errors": [],
+    "screenshot": "qa\\overworld-larger-1920.png"
+  },
+  {
+    "viewport": [
+      1366,
+      768
+    ],
+    "document": [
+      1366,
+      823
+    ],
+    "boxes": {
+      "sign": {
+        "x": 263,
+        "y": 196.796875,
+        "width": 840,
+        "height": 244.796875,
+        "bottom": 441.59375,
+        "right": 1103,
+        "font": "11px",
+        "text": "КАССОВАЯ ДИСЦИПЛИНА\n\noko\nВИДЕО ПОД КОНТРОЛЕМ"
+      },
+      "rig": {
+        "x": 263,
+        "y": 135.796875,
+        "width": 840,
+        "height": 318,
+        "bottom": 453.796875,
+        "right": 1103,
+        "font": "11px",
+        "text": "КАССОВАЯ ДИСЦИПЛИНА\n\noko\nВИДЕО ПОД КОНТРОЛЕМ"
+      },
+      "greeting": {
+        "x": 213,
+        "y": 471.796875,
+        "width": 940,
+        "height": 34,
+        "bottom": 505.796875,
+        "right": 1153,
+        "font": "12px",
+        "text": "> Добро пожаловать на пост наблюдения."
+      },
+      "form": {
+        "x": 403,
+        "y": 527.796875,
+        "width": 560,
+        "height": 213.59375,
+        "bottom": 741.390625,
+        "right": 963,
+        "font": "11px",
+        "text": "КЛЮЧ ДОСТУПА\nSTART ANALYSIS\nДалее — загрузка видео →"
+      },
+      "footer": {
+        "x": 0,
+        "y": 781.296875,
+        "width": 1366,
+        "height": 17.09375,
+        "bottom": 798.390625,
+        "right": 1366,
+        "font": "9px",
+        "text": "НОВЫЙ МИР. ТОЧНЫЙ ВЗГЛЯД."
+      },
+      "logo": {
+        "x": 463,
+        "y": 253.796875,
+        "width": 440,
+        "height": 132,
+        "bottom": 385.796875,
+        "right": 903,
+        "font": "48px",
+        "text": "oko"
+      },
+      "eyebrow": {
+        "x": 213,
+        "y": 98,
+        "width": 940,
+        "height": 19.796875,
+        "bottom": 117.796875,
+        "right": 1153,
+        "font": "11px",
+        "text": "ВАШ ПОСТ НАБЛЮДЕНИЯ"
+      },
+      "overline": {
+        "x": 296,
+        "y": 223.796875,
+        "width": 774,
+        "height": 18,
+        "bottom": 241.796875,
+        "right": 1070,
+        "font": "10px",
+        "text": "КАССОВАЯ ДИСЦИПЛИНА"
+      },
+      "subtitle": {
+        "x": 569,
+        "y": 398.796875,
+        "width": 228,
+        "height": 10,
+        "bottom": 408.796875,
+        "right": 797,
+        "font": "10px",
+        "text": "ВИДЕО ПОД КОНТРОЛЕМ"
+      },
+      "label": {
+        "x": 403,
+        "y": 527.796875,
+        "width": 560,
+        "height": 19.796875,
+        "bottom": 547.59375,
+        "right": 963,
+        "font": "11px",
+        "text": "КЛЮЧ ДОСТУПА"
+      },
+      "input": {
+        "x": 440,
+        "y": 561.59375,
+        "width": 476,
+        "height": 60,
+        "bottom": 621.59375,
+        "right": 916,
+        "font": "13px",
+        "text": ""
+      },
+      "start": {
+        "x": 403,
+        "y": 641.59375,
+        "width": 560,
+        "height": 66,
+        "bottom": 707.59375,
+        "right": 963,
+        "font": "17px",
+        "text": "START ANALYSIS"
+      },
+      "hint": {
+        "x": 403,
+        "y": 721.59375,
+        "width": 560,
+        "height": 19.796875,
+        "bottom": 741.390625,
+        "right": 963,
+        "font": "11px",
+        "text": "Далее — загрузка видео →"
+      },
+      "navbrand": {
+        "x": 83,
+        "y": 23.296875,
+        "width": 70,
+        "height": 23.390625,
+        "bottom": 46.6875,
+        "right": 153,
+        "font": "13px",
+        "text": "oko"
+      }
+    },
+    "outliers": [],
+    "tests": {
+      "noHorizontalOverflow": true,
+      "signAboveGreeting": true,
+      "greetingAboveForm": true,
+      "footerBelowForm": true
+    },
+    "fontLoaded": true,
+    "errors": [],
+    "screenshot": "qa\\overworld-larger-1366.png"
+  },
+  {
+    "viewport": [
+      390,
+      844
+    ],
+    "document": [
+      390,
+      844
+    ],
+    "boxes": {
+      "sign": {
+        "x": 18,
+        "y": 232.1875,
+        "width": 354,
+        "height": 194.125,
+        "bottom": 426.3125,
+        "right": 372,
+        "font": "11px",
+        "text": "КАССОВАЯ ДИСЦИПЛИНА\n\noko\nВИДЕО ПОД КОНТРОЛЕМ"
+      },
+      "rig": {
+        "x": 18,
+        "y": 181.1875,
+        "width": 354,
+        "height": 252,
+        "bottom": 433.1875,
+        "right": 372,
+        "font": "11px",
+        "text": "КАССОВАЯ ДИСЦИПЛИНА\n\noko\nВИДЕО ПОД КОНТРОЛЕМ"
+      },
+      "greeting": {
+        "x": 18,
+        "y": 451.1875,
+        "width": 354,
+        "height": 40,
+        "bottom": 491.1875,
+        "right": 372,
+        "font": "10px",
+        "text": "> Добро пожаловать на пост наблюдения."
+      },
+      "form": {
+        "x": 18,
+        "y": 511.1875,
+        "width": 354,
+        "height": 198,
+        "bottom": 709.1875,
+        "right": 372,
+        "font": "11px",
+        "text": "КЛЮЧ ДОСТУПА\nSTART ANALYSIS\nДалее — загрузка видео →"
+      },
+      "footer": {
+        "x": 0,
+        "y": 804.8125,
+        "width": 390,
+        "height": 15.1875,
+        "bottom": 820,
+        "right": 390,
+        "font": "8px",
+        "text": "НОВЫЙ МИР. ТОЧНЫЙ ВЗГЛЯД."
+      },
+      "logo": {
+        "x": 50.09375,
+        "y": 286.578125,
+        "width": 289.796875,
+        "height": 86.9375,
+        "bottom": 373.515625,
+        "right": 339.890625,
+        "font": "22.62px",
+        "text": "oko"
+      },
+      "eyebrow": {
+        "x": 18,
+        "y": 148.796875,
+        "width": 354,
+        "height": 14.390625,
+        "bottom": 163.1875,
+        "right": 372,
+        "font": "8px",
+        "text": "ВАШ ПОСТ НАБЛЮДЕНИЯ"
+      },
+      "overline": {
+        "x": 34,
+        "y": 260.1875,
+        "width": 322,
+        "height": 14.390625,
+        "bottom": 274.578125,
+        "right": 356,
+        "font": "8px",
+        "text": "КАССОВАЯ ДИСЦИПЛИНА"
+      },
+      "subtitle": {
+        "x": 107.59375,
+        "y": 388.515625,
+        "width": 174.8125,
+        "height": 8,
+        "bottom": 396.515625,
+        "right": 282.40625,
+        "font": "8px",
+        "text": "ВИДЕО ПОД КОНТРОЛЕМ"
+      },
+      "label": {
+        "x": 18,
+        "y": 511.1875,
+        "width": 354,
+        "height": 18,
+        "bottom": 529.1875,
+        "right": 372,
+        "font": "10px",
+        "text": "КЛЮЧ ДОСТУПА"
+      },
+      "input": {
+        "x": 55,
+        "y": 543.1875,
+        "width": 270,
+        "height": 54,
+        "bottom": 597.1875,
+        "right": 325,
+        "font": "12px",
+        "text": ""
+      },
+      "start": {
+        "x": 18,
+        "y": 617.1875,
+        "width": 354,
+        "height": 60,
+        "bottom": 677.1875,
+        "right": 372,
+        "font": "14px",
+        "text": "START ANALYSIS"
+      },
+      "hint": {
+        "x": 18,
+        "y": 691.1875,
+        "width": 354,
+        "height": 18,
+        "bottom": 709.1875,
+        "right": 372,
+        "font": "10px",
+        "text": "Далее — загрузка видео →"
+      },
+      "navbrand": {
+        "x": 50,
+        "y": 22,
+        "width": 51,
+        "height": 18,
+        "bottom": 40,
+        "right": 101,
+        "font": "10px",
+        "text": "oko"
+      }
+    },
+    "outliers": [],
+    "tests": {
+      "noHorizontalOverflow": true,
+      "signAboveGreeting": true,
+      "greetingAboveForm": true,
+      "footerBelowForm": true
+    },
+    "fontLoaded": true,
+    "errors": [],
+    "screenshot": "qa\\overworld-larger-390.png"
+  },
+  {
+    "viewport": [
+      320,
+      568
+    ],
+    "document": [
+      320,
+      734
+    ],
+    "boxes": {
+      "sign": {
+        "x": 18,
+        "y": 177.390625,
+        "width": 284,
+        "height": 175.21875,
+        "bottom": 352.609375,
+        "right": 302,
+        "font": "11px",
+        "text": "КАССОВАЯ ДИСЦИПЛИНА\n\noko\nВИДЕО ПОД КОНТРОЛЕМ"
+      },
+      "rig": {
+        "x": 18,
+        "y": 126.390625,
+        "width": 284,
+        "height": 252,
+        "bottom": 378.390625,
+        "right": 302,
+        "font": "11px",
+        "text": "КАССОВАЯ ДИСЦИПЛИНА\n\noko\nВИДЕО ПОД КОНТРОЛЕМ"
+      },
+      "greeting": {
+        "x": 18,
+        "y": 396.390625,
+        "width": 284,
+        "height": 40,
+        "bottom": 436.390625,
+        "right": 302,
+        "font": "10px",
+        "text": "> Добро пожаловать на пост наблюдения."
+      },
+      "form": {
+        "x": 18,
+        "y": 456.390625,
+        "width": 284,
+        "height": 198,
+        "bottom": 654.390625,
+        "right": 302,
+        "font": "11px",
+        "text": "КЛЮЧ ДОСТУПА\nSTART ANALYSIS\nДалее — загрузка видео →"
+      },
+      "footer": {
+        "x": 0,
+        "y": 695.203125,
+        "width": 320,
+        "height": 15.1875,
+        "bottom": 710.390625,
+        "right": 320,
+        "font": "8px",
+        "text": "НОВЫЙ МИР. ТОЧНЫЙ ВЗГЛЯД."
+      },
+      "logo": {
+        "x": 46.59375,
+        "y": 231.78125,
+        "width": 226.796875,
+        "height": 68.03125,
+        "bottom": 299.8125,
+        "right": 273.390625,
+        "font": "20px",
+        "text": "oko"
+      },
+      "eyebrow": {
+        "x": 18,
+        "y": 94,
+        "width": 284,
+        "height": 14.390625,
+        "bottom": 108.390625,
+        "right": 302,
+        "font": "8px",
+        "text": "ВАШ ПОСТ НАБЛЮДЕНИЯ"
+      },
+      "overline": {
+        "x": 34,
+        "y": 205.390625,
+        "width": 252,
+        "height": 14.390625,
+        "bottom": 219.78125,
+        "right": 286,
+        "font": "8px",
+        "text": "КАССОВАЯ ДИСЦИПЛИНА"
+      },
+      "subtitle": {
+        "x": 72.59375,
+        "y": 314.8125,
+        "width": 174.8125,
+        "height": 8,
+        "bottom": 322.8125,
+        "right": 247.40625,
+        "font": "8px",
+        "text": "ВИДЕО ПОД КОНТРОЛЕМ"
+      },
+      "label": {
+        "x": 18,
+        "y": 456.390625,
+        "width": 284,
+        "height": 18,
+        "bottom": 474.390625,
+        "right": 302,
+        "font": "10px",
+        "text": "КЛЮЧ ДОСТУПА"
+      },
+      "input": {
+        "x": 55,
+        "y": 488.390625,
+        "width": 200,
+        "height": 54,
+        "bottom": 542.390625,
+        "right": 255,
+        "font": "12px",
+        "text": ""
+      },
+      "start": {
+        "x": 18,
+        "y": 562.390625,
+        "width": 284,
+        "height": 60,
+        "bottom": 622.390625,
+        "right": 302,
+        "font": "14px",
+        "text": "START ANALYSIS"
+      },
+      "hint": {
+        "x": 18,
+        "y": 636.390625,
+        "width": 284,
+        "height": 18,
+        "bottom": 654.390625,
+        "right": 302,
+        "font": "10px",
+        "text": "Далее — загрузка видео →"
+      },
+      "navbrand": {
+        "x": 50,
+        "y": 22,
+        "width": 51,
+        "height": 18,
+        "bottom": 40,
+        "right": 101,
+        "font": "10px",
+        "text": "oko"
+      }
+    },
+    "outliers": [],
+    "tests": {
+      "noHorizontalOverflow": true,
+      "signAboveGreeting": true,
+      "greetingAboveForm": true,
+      "footerBelowForm": true
+    },
+    "fontLoaded": true,
+    "errors": [],
+    "screenshot": "qa\\overworld-larger-320.png"
+  }
+]

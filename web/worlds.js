@@ -46,7 +46,7 @@ export class Worlds {
       this.maskFrame=requestAnimationFrame(()=>{this.maskFrame=0;this.measureExclusions();});
     });
     this.mutations.observe(document.querySelector('main'),{childList:true,subtree:true,attributes:true,attributeFilter:['hidden','open','class']});
-    // Keep the original composition, averaging its fine textures into a calmer pixel grid.
+    // Use the original world artwork; Nether and End retain their calmer rendering.
     this.ready=Promise.all(['overworld','nether','end'].map(world=>new Promise(resolve=>{
       const img=new Image();
       img.onload=()=>{this.images[world]=img;if(world==='nether')this.prepareLava(img);if(world===this.world){this.backgroundWorld=null;this.drawBackground();}resolve();};
@@ -77,15 +77,16 @@ export class Worlds {
     const key=image?this.world:'pending-'+this.world;
     if(this.backgroundWorld===key)return;
     this.backgroundWorld=key;
-    ctx.canvas.width=BACKGROUND_WIDTH;ctx.canvas.height=BACKGROUND_HEIGHT;
+    const width=this.world==='overworld'?F.width:BACKGROUND_WIDTH;
+    const height=this.world==='overworld'?F.height:BACKGROUND_HEIGHT;
+    ctx.canvas.width=width;ctx.canvas.height=height;
     if(image){
-      // Downsample once per scene; CSS scales this cached canvas with crisp edges.
-      // Only this static image uses smoothing. Particle and portal grids stay independent.
-      ctx.imageSmoothingEnabled=true;ctx.imageSmoothingQuality='high';
-      ctx.drawImage(image,0,0,BACKGROUND_WIDTH,BACKGROUND_HEIGHT);
+      // Restore the original Overworld pixel grid. Particle and portal grids stay independent.
+      ctx.imageSmoothingEnabled=this.world!=='overworld';ctx.imageSmoothingQuality='high';
+      ctx.drawImage(image,0,0,width,height);
       ctx.imageSmoothingEnabled=false;
     }else{
-      rect(ctx,this.world==='overworld'?'#91a7a2':this.world==='nether'?'#260e16':'#100d1b',0,0,BACKGROUND_WIDTH,BACKGROUND_HEIGHT);
+      rect(ctx,this.world==='overworld'?'#91a7a2':this.world==='nether'?'#260e16':'#100d1b',0,0,width,height);
     }
   }
   prepareLava(img){
@@ -202,7 +203,8 @@ export class Worlds {
     if(this.transitioning)this.finish({assemble:false});
     if(this.world===world)return Promise.resolve();
     this.timerIds.forEach(clearTimeout);this.timerIds=[];
-    this.target=world;this.endTransition=world==='end'||this.world==='end'||world==='credits'||this.world==='credits';this.transitioning=true;this.portal.hidden=false;this.portal.className='portal-transition to-'+world;
+    // World travel uses the full portal; only the optional credits use the short exit effect.
+    this.target=world;this.endTransition=world==='credits'||this.world==='credits';this.transitioning=true;this.portal.hidden=false;this.portal.className='portal-transition to-'+world;
     this.portal.dataset.phase='reveal';this.fitPortal();
     this.calm=!this.animated;this.start=performance.now();
     if(!this.calm && this.world==='overworld')document.getElementById('intro-composition').classList.add('intro-leaving');
@@ -242,6 +244,7 @@ export class Worlds {
     const blend=progress(ms,P.crossingEndMs,P.revealMs),fade=1-progress(ms,P.revealMs,P.durationMs);
     const purple=[[45,20,76],[66,28,101],[91,38,126],[116,45,151],[142,57,168],[165,76,182],[123,55,154],[76,28,114]];
     const destination=this.target==='nether'?[[43,13,25],[68,21,31],[97,31,35],[125,44,37],[151,63,40],[174,84,49],[126,45,40],[77,24,32]]
+      :this.target==='end'?[[14,12,27],[25,18,43],[39,25,60],[54,34,78],[71,45,98],[91,61,120],[65,42,92],[35,23,56]]
       :[[37,101,137],[48,124,158],[66,147,180],[87,168,196],[110,187,208],[141,202,216],[97,173,199],[59,133,169]];
     const palette=purple.map((rgb,i)=>'rgb('+rgb.map((c,j)=>Math.round(c+(destination[i][j]-c)*blend)).join(',')+')');
     const sc=this.surfaceCtx,phase=Math.floor(ms/80)*.12;

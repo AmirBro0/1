@@ -169,7 +169,7 @@ def main():
                 page.wait_for_function("document.fonts.check('12px Pixel')")
                 page.wait_for_function("""() => {
                     const c=document.getElementById('landscape');
-                    if(c.width!==480 || c.height!==270)return false;
+                    if(c.width!==640 || c.height!==360)return false;
                     const d=c.getContext('2d').getImageData(0,0,c.width,c.height).data;
                     const colors=new Set();for(let i=0;i<d.length;i+=4*101)
                         colors.add(`${d[i]},${d[i+1]},${d[i+2]}`);
@@ -201,7 +201,7 @@ def main():
                       "Wooden sign texture resolves inside the current release")
                 check(prefix in appearance["fallback"] and "overworld.png" in appearance["fallback"],
                       "Overworld CSS background resolves inside the current release")
-                check(appearance["canvas"] == [480, 270], "JavaScript painted the detailed 480×270 background")
+                check(appearance["canvas"] == [640, 360], "JavaScript painted the original 640×360 Overworld background")
                 check(appearance["logoLoaded"] and prefix in appearance["logo"],
                       "The released oko wordmark loaded successfully")
                 with urlopen(upstream + urlsplit(appearance["logo"]).path, timeout=20) as logo_response:

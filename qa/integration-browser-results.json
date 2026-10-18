@@ -1,0 +1,24 @@
+{
+  "ok": true,
+  "checks": [
+    "invalid-key-rejected",
+    "cookie-login-and-capabilities",
+    "real-A-clear-B-late-A-does-not-replace-B",
+    "double-click-single-job-and-real-clear-negative",
+    "real-obstruction-JPEG-timeline-player-review-position",
+    "reload-auth-run-report-and-review-without-model",
+    "archive-search-review-filter-reanalyze-delete-shared-video",
+    "active-session-START-after-credits-needs-no-key",
+    "portals-credits-pause-skip-mute-reduced-mobile",
+    "storage-denied-login-navigation-safe",
+    "no-secret-storage-no-browser-errors"
+  ],
+  "browser_errors": [],
+  "missing_end_credits_audio": [],
+  "analysis_requests": 3,
+  "run_ids": {
+    "late_A": "1dc3ec395d1240b3b6610bc42f37c620",
+    "clear_B": "0c8a1d249b5e408e986b01cce5297231",
+    "intentional_repeat": "25421e053f6f4cc2b00b95cfd50a5e0b"
+  }
+}

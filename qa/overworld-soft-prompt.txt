@@ -1,0 +1,23 @@
+Overworld softer backdrop — generated 2026-10-18
+Use: project welcome/background scene.
+Method: built-in image_gen__imagegen (imagegen skill default mode), with previous Overworld image as style/environment reference.
+Reference: web/assets/worlds/overworld.png (preserved unchanged).
+Generated original artifact: exec-dc2ae6a0-0ac3-4561-8830-d4bea243490f.png
+Project asset: web/assets/worlds/overworld-soft.png
+Dimensions: 1672 x 941, RGB PNG.
+SHA256: 78bd34ac60bf2a8afbbf58fed9a198ff50a4cb7be867ab19384c6b81b43f0946
+Result inspected visually: muted sage foliage, dusty slate-blue sky, gray clouds and quiet central valley. New composition, no runtime blur/tint overlay.
+
+Exact generation prompt:
+
+Use case: stylized-concept
+Asset type: full-bleed background panorama for the welcome screen of a pixel voxel web application, wide 16:9 landscape.
+Primary request: create a NEW softer and quieter Overworld landscape. The reference image is style and environment guidance only; create a new composition, not a filter applied to it. Retain crisp intentional square pixels and block-built voxel terrain, broadleaf trees, terraced grass, a calm river, and distant mountains. This must feel significantly less bright and less eye-popping than the reference.
+Input images: reference image: existing Overworld panorama; use only to understand blocky pixel art environment and wide framing.
+Scene/backdrop: a peaceful expansive valley beneath a gently overcast sky, natural broadleaf trees at the outer left and right edges, low grassy terraces, slate river winding through lower valley, distant mountain silhouettes softened by atmospheric depth.
+Composition/framing: wide 16:9 landscape. Keep the middle 50 percent visually quiet with spacious dusty blue sky and simple distant valley, so a wooden sign interface can sit over it. Main trees and detailed terrain frame the outer edges. Horizon in lower half. No dominant central landmark.
+Lighting/mood: soft diffuse daylight through thin overcast cloud, calm restful atmosphere, warm gray haze, modest luminance, gentle contrast. Softer through palette and lighting, not blur.
+Color palette: muted sage greens and olive-gray foliage, desaturated slate and dusty blue sky and water, subdued earth browns, warm gray clouds. Clearly less saturated and lower contrast than the reference. Clouds must not be pure white. Avoid yellow lime grass, emerald neon highlights, saturated cyan water or sky.
+Style/medium: cohesive high-quality pixel art voxel panorama with crisp deliberate pixel grid, solid block architecture, small stepped textures, restrained microtexture. No photorealism, no smoothing blur.
+Constraints: no characters, animals, text, letters, branding, watermark, UI, frames, signs, borders. No intense sun, glowing patches, stark white clouds or neon greens. Entire image is scenic background. Opaque background.
+

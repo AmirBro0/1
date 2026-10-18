@@ -1,0 +1,24 @@
+/* Full-resolution original world art and the new End companion landscape. */
+.world-backdrop #landscape{image-rendering:pixelated}
+.world-backdrop:after{background:transparent}
+[data-world=end] .world-backdrop{background:#130d27}
+.end-entrance,.exit-island{display:none!important}
+
+/* The island is the entrance: one large, keyboard-accessible visual target. */
+.end-exit-footer{min-height:0;padding:35px 0 46px;gap:0;isolation:auto}
+.end-portal-button{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;width:min(720px,100%);margin:0;padding:0;border:0;box-shadow:none;background:transparent;color:#ece5b9;cursor:pointer;isolation:isolate;-webkit-tap-highlight-color:transparent}
+.end-portal-button img{display:block;width:100%;height:auto;max-width:none;image-rendering:pixelated;pointer-events:none;transition:transform .24s ease,filter .24s ease}
+.end-portal-button span{position:relative;display:block;align-self:center;margin-top:-14px;padding:12px 21px;font-family:inherit;font-size:9px;line-height:1.9;color:#c3e2cf;background:#132c2bcf;border:1px solid #49786b;box-shadow:0 3px 0 #080e17;text-shadow:1px 1px #07110e;transition:background .18s,border-color .18s}
+.end-portal-button:hover img{transform:translateY(-5px);filter:drop-shadow(0 8px 15px #5ce6bb28)}
+.end-portal-button:hover span{background:#1b3c36;border-color:#93c9a9}
+.end-portal-button:focus-visible{outline:2px solid #aff2d1;outline-offset:8px}
+.end-portal-button:active img{transform:translateY(-1px)}
+.end-exit-footer>p{margin:18px 0 0;color:#b7abc7;font-size:7px;line-height:2.2;text-shadow:1px 1px #140d24}
+@media(max-width:740px){
+ .end-exit-footer{padding:25px 0 36px;margin-left:-10px;margin-right:-10px}
+ .end-portal-button{width:min(650px,100%)}
+ .end-portal-button span{font-size:7px;padding:10px 14px;margin-top:-4px}
+ .end-exit-footer>p{max-width:240px;font-size:6px;line-height:2.2;margin-top:15px}
+}
+@media(prefers-reduced-motion:reduce){.end-portal-button img{transition:none}.end-portal-button:hover img{transform:none}}
+.motion-off .end-portal-button:hover img{transform:none}

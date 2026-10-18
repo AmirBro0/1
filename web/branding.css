@@ -1,0 +1,9 @@
+/* A carved, pixel-cut name for the original wooden welcome sign. */
+.welcome-scene .sign-rig{height:250px}
+.welcome-scene .wood-sign{padding:18px 22px 19px}
+.welcome-scene .wood-sign h1{width:min(340px,76%);margin:8px auto 7px;line-height:1;text-shadow:none;letter-spacing:0}
+.oko-wordmark{display:block;width:100%;height:auto;image-rendering:pixelated}
+.welcome-scene .sign-overline{letter-spacing:2px}
+.welcome-scene .sign-subtitle{letter-spacing:2px}
+@media(min-width:1600px){.welcome-scene .sign-rig{height:265px}.welcome-scene .wood-sign{padding-top:23px;padding-bottom:24px}.welcome-scene .wood-sign h1{width:360px}}
+@media(max-width:740px){.welcome-scene .sign-rig{height:228px}.welcome-scene .wood-sign{padding:23px 10px 20px}.welcome-scene .wood-sign h1{width:min(270px,85%);margin:8px auto 7px}.welcome-scene .sign-overline,.welcome-scene .sign-subtitle{letter-spacing:1.2px}}

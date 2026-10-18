@@ -1,0 +1,204 @@
+{
+  "schema_version": 1,
+  "reference": "https://datathon.com.kz/ru",
+  "reference_usage": "Visual reference only; no source code or assets copied",
+  "files": [
+    {
+      "path": "web/assets/fonts/OFL.txt",
+      "source": "https://github.com/google/fonts/tree/main/ofl/pressstart2p",
+      "version": "Google Fonts main retrieved 2026-10-18",
+      "usage": "SIL Open Font License 1.1; see web/assets/fonts/OFL.txt",
+      "sha256": "705960c3281a5765ecc0b59bd4ed7ca59eed165748076bc2fc3e8fdbfeb944b0"
+    },
+    {
+      "path": "web/assets/fonts/PressStart2P-Regular.ttf",
+      "source": "https://github.com/google/fonts/tree/main/ofl/pressstart2p",
+      "version": "Google Fonts main retrieved 2026-10-18",
+      "usage": "SIL Open Font License 1.1; see web/assets/fonts/OFL.txt",
+      "sha256": "034c77f1f05ec89421e4a63f0e3a4ca1ecf852cc6d2bf611f126f275728e017d"
+    },
+    {
+      "path": "web/assets/textures/nether-brick.svg",
+      "source": "Original project SVG",
+      "version": "2026-10-18",
+      "usage": "Project-authored replacement asset",
+      "sha256": "679663ab107c7061f9640d9b4bce4e3e1e86b5bce7c9674110f0e0a685b5b95d"
+    },
+    {
+      "path": "web/assets/textures/obsidian.svg",
+      "source": "Original project SVG",
+      "version": "2026-10-18",
+      "usage": "Project-authored replacement asset",
+      "sha256": "8f14eb305108efe3a096878a9ac1b51a9219b45c85947fbd7f062939616bc72c"
+    },
+    {
+      "path": "web/assets/textures/wood.svg",
+      "source": "Original project SVG",
+      "version": "2026-10-18",
+      "usage": "Project-authored replacement asset",
+      "sha256": "d146919f603bfb3f0d71bf8144501c69a9badb4b48da0c9a13c2e94b58431709"
+    },
+    {
+      "path": "web/assets/worlds/nether.png",
+      "source": "Built-in image_gen for this project",
+      "version": "2026-10-18",
+      "usage": "Original generated project artwork; no game file copied",
+      "sha256": "2607b1b8064dee0cca738b6952a4c6b68cd960e836903429651afe52fdb503c8"
+    },
+    {
+      "path": "web/assets/worlds/overworld.png",
+      "source": "Built-in image_gen for this project",
+      "version": "2026-10-18",
+      "usage": "Active original Overworld composition; averaged to 480x270 at render time, background-only CSS saturation 0.92 and brightness 0.97 plus neutral overlay; original bytes unchanged",
+      "sha256": "8f32914e9e043ddf654dbe5c309ab5368ce95624b5512555ff3669e5470cb9a3"
+    },
+    {
+      "path": "web/assets/worlds/end.png",
+      "source": "Built-in image_gen; supplied project Overworld and Nether PNGs used as style references",
+      "version": "2026-10-18",
+      "usage": "New original End companion landscape; full prompt in ASSETS.md",
+      "sha256": "a297cd16b0748d3f57046012152fb3cc6361198cc43404982cb575f7262a3d6e"
+    },
+    {
+      "path": "web/end-scene.svg",
+      "source": "Original project-authored vector asset; composition guided by user supplied reference image",
+      "version": "2026-10-18",
+      "usage": "Accessible active portal illustration; no game file copied",
+      "sha256": "cb3dad0df3bd4f97bf4c35651caab92012d0a1bdebee79913ba4bf0df74cda8a"
+    },
+    {
+      "path": "web/assets/worlds/overworld-soft.png",
+      "source": "Built-in image_gen; earlier project Overworld used only as a style and environment reference",
+      "version": "2026-10-18",
+      "usage": "Preserved unused softer Overworld alternative for oko; exact prompt in qa/overworld-soft-prompt.txt",
+      "sha256": "78bd34ac60bf2a8afbbf58fed9a198ff50a4cb7be867ab19384c6b81b43f0946"
+    },
+    {
+      "path": "web/assets/branding/oko-wordmark.svg",
+      "source": "Original project-authored pixel vector wordmark",
+      "version": "2026-10-18",
+      "usage": "Expressive oko welcome sign; gold block depth and subtle eye motifs; no external font or bitmap generation",
+      "sha256": "35e4d07c6e893732cf33f790f71e41b7c55b41dc11d85007510f733e6636847d"
+    }
+  ],
+  "inline_assets": [
+    {
+      "path": "web/index.html",
+      "purpose": "Original pixel icons and sad ghast SVG"
+    },
+    {
+      "path": "web/audio.js",
+      "purpose": "Quiet original procedural UI sound effects; no music"
+    },
+    {
+      "path": "web/worlds.js",
+      "purpose": "Local Overworld, Nether and End image renderer with one-time averaging to 480x270 and pixelated scaling, masked quiet particle layer and portal transition canvas",
+      "source": "Authored for FORTE AUDIT integration",
+      "version": "2026-10-18"
+    },
+    {
+      "path": "web/credits.js",
+      "purpose": "Accessible credits renderer; original pack text in web/content/credits.json",
+      "source": "FORTE_AUDIT_End_Creative_Pack.zip content/CREDITS_RU.json",
+      "version": "2026-10-18"
+    }
+  ],
+  "private_minecraft_pack": {
+    "path": "private_asset_pack/minecraft/1.21.10/manifest.json",
+    "enabled_by_default": false,
+    "public_redistribution_approved": false,
+    "excluded_from_docker_and_git": true,
+    "portal_playback": {
+      "event": "block.portal.travel",
+      "source_offset_seconds": 5,
+      "duration_seconds": 1.25,
+      "envelope_peak_gain": 0.09,
+      "visual_crossing_ms": 900
+    }
+  },
+  "generation_prompts": "ASSETS.md",
+  "music": {
+    "provided": true,
+    "generated": false,
+    "downloaded": false,
+    "enabled_after_user_sound_choice": true,
+    "public_redistribution_approved": false,
+    "files": [
+      {
+        "path": "web/assets/music/overworld.m4a",
+        "sha256": "7ec67c938b189a90e56eb654e8056345252a79016e735b19953399cae91e454b",
+        "byte_identical_to_user_attachment": true,
+        "duration_seconds": 208.61,
+        "whole_track_lufs": -16.3,
+        "balance": 1
+      },
+      {
+        "path": "web/assets/music/netherworld.m4a",
+        "sha256": "551df3607183b2ffe3ea49cb5a5632a7d4447c01314b6dd6a675235a0f843d80",
+        "byte_identical_to_user_attachment": true,
+        "duration_seconds": 295.2,
+        "whole_track_lufs": -15.8,
+        "balance": 0.841395
+      },
+      {
+        "path": "web/assets/music/end.m4a",
+        "sha256": "d732402e77bec4d6fe649fcfd2b31c499b159c0d18a23e6ad9cd71f560ef40e3",
+        "byte_identical_to_user_attachment": true,
+        "duration_seconds": 244.875011,
+        "volume": 0.08,
+        "balance": 1,
+        "world": "end"
+      },
+      {
+        "path": "web/assets/music/titles.m4a",
+        "sha256": "1ac7f0c4cee9342939fee637ef0f5ed95f3f4ed7b9d43c7bf9e5532fe0c78e5f",
+        "byte_identical_to_user_attachment": true,
+        "duration_seconds": 603,
+        "volume": 0.1,
+        "balance": 1,
+        "world": "credits"
+      }
+    ],
+    "volume_policy": "End 0.08, credits 0.10 at the default music preference; quieter saved preference remains a ceiling. One media volume stage, with the existing 0.30 video duck multiplier.",
+    "end_titles_verification": "qa/end-titles-audio-results.json"
+  },
+  "current_backgrounds": {
+    "paths": [
+      "web/assets/worlds/overworld.png",
+      "web/assets/worlds/nether.png",
+      "web/assets/worlds/end.png"
+    ],
+    "loaded_by_current_renderer": true,
+    "full_resolution": false,
+    "render_resolution": [
+      480,
+      270
+    ],
+    "resampling": "One-time image averaging followed by CSS pixelated scaling",
+    "original_overworld_and_nether_restored": true,
+    "animated_particles_separate": true,
+    "original_overworld_preserved": true,
+    "soft_overworld_active": false,
+    "display_adjustments": {
+      "method": "CSS filters and neutral overlays on landscape layers only; UI unaffected",
+      "overworld": {
+        "saturation": 0.92,
+        "saturation_reduction_percent": 8,
+        "brightness": 0.97,
+        "overlay": "subtle neutral"
+      },
+      "nether": {
+        "saturation": 0.78,
+        "brightness": 0.88,
+        "overlay": "dark neutral"
+      },
+      "end": {
+        "saturation": 0.55,
+        "brightness": 0.82,
+        "overlay": "dark neutral"
+      },
+      "baked_into_image": false,
+      "original_sha256_unchanged": true
+    }
+  }
+}

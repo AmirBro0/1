@@ -1,0 +1,14 @@
+{
+  "page_title": "oko — проверка кассового видео",
+  "background": "overworld-soft.png",
+  "desktop": [
+    1366,
+    900
+  ],
+  "mobile": [
+    390,
+    844
+  ],
+  "credits_project": "oko",
+  "javascript_errors": []
+}

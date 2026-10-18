@@ -1,0 +1,248 @@
+{
+  "created_at_utc": "2026-10-17T23:07:05.728465+00:00",
+  "ffmpeg_executable": "C:\\Users\\4422~1\\AppData\\Local\\Temp\\forte-ffmpeg-test\\imageio_ffmpeg\\binaries\\ffmpeg-win-x86_64-v7.1.exe",
+  "analysis_only_no_listening_performed": true,
+  "method": {
+    "whole_track_and_excerpt_filters": "ebur128=peak=true,volumedetect",
+    "interval_selection": "Three non-overlapping 12-second excerpts centered around highest 3-second short-term loudness values; excerpt start separation at least 15 seconds.",
+    "samples_are_decoded_only_for_analysis": true,
+    "copied_audio_processing": "none; shutil.copyfile with SHA256 equality check",
+    "measurement_precision": "FFmpeg summary reports loudness/peaks to 0.1 dB/LU."
+  },
+  "tracks": [
+    {
+      "name": "overworld.m4a",
+      "source_path": "C:\\Users\\Маркет\\Downloads\\Telegram Desktop\\overworld.m4a",
+      "destination_path": "C:\\Users\\Маркет\\.codex\\.chatgpt-projects\\g-p-6ad3d33c21b48191b3ef155d3e5fa762\\fortebank-video-audit\\web\\assets\\music\\overworld.m4a",
+      "size_bytes": 3376856,
+      "source_sha256": "7ec67c938b189a90e56eb654e8056345252a79016e735b19953399cae91e454b",
+      "destination_sha256": "7ec67c938b189a90e56eb654e8056345252a79016e735b19953399cae91e454b",
+      "byte_identical": true,
+      "container": "M4A / ISO BMFF",
+      "codec": "aac (LC) (mp4a / 0x6134706D)",
+      "sample_rate_hz": 44100,
+      "channel_layout": "stereo",
+      "duration_seconds": 208.61,
+      "whole_track": {
+        "integrated_lufs": -16.3,
+        "loudness_range_lu": 21.1,
+        "true_peak_dbfs": -0.1,
+        "mean_volume_db": -20.7,
+        "max_sample_volume_db": -0.1
+      },
+      "loud_intervals": [
+        {
+          "start_seconds": 164.2,
+          "end_seconds": 176.2,
+          "duration_seconds": 12,
+          "selection_short_term_lufs": -10.4,
+          "integrated_lufs": -13.4,
+          "loudness_range_lu": 8.1,
+          "true_peak_dbfs": -0.1,
+          "mean_volume_db": -16.7,
+          "max_sample_volume_db": -0.1
+        },
+        {
+          "start_seconds": 57.3,
+          "end_seconds": 69.3,
+          "duration_seconds": 12,
+          "selection_short_term_lufs": -12.4,
+          "integrated_lufs": -14.5,
+          "loudness_range_lu": 11.6,
+          "true_peak_dbfs": -0.1,
+          "mean_volume_db": -17.6,
+          "max_sample_volume_db": -0.1
+        },
+        {
+          "start_seconds": 28.7,
+          "end_seconds": 40.7,
+          "duration_seconds": 12,
+          "selection_short_term_lufs": -13.1,
+          "integrated_lufs": -14.2,
+          "loudness_range_lu": 2.7,
+          "true_peak_dbfs": -0.1,
+          "mean_volume_db": -16.5,
+          "max_sample_volume_db": -0.1
+        }
+      ]
+    },
+    {
+      "name": "netherworld.m4a",
+      "source_path": "C:\\Users\\Маркет\\Downloads\\Telegram Desktop\\netherworld.m4a",
+      "destination_path": "C:\\Users\\Маркет\\.codex\\.chatgpt-projects\\g-p-6ad3d33c21b48191b3ef155d3e5fa762\\fortebank-video-audit\\web\\assets\\music\\netherworld.m4a",
+      "size_bytes": 4778211,
+      "source_sha256": "551df3607183b2ffe3ea49cb5a5632a7d4447c01314b6dd6a675235a0f843d80",
+      "destination_sha256": "551df3607183b2ffe3ea49cb5a5632a7d4447c01314b6dd6a675235a0f843d80",
+      "byte_identical": true,
+      "container": "M4A / ISO BMFF",
+      "codec": "aac (LC) (mp4a / 0x6134706D)",
+      "sample_rate_hz": 44100,
+      "channel_layout": "stereo",
+      "duration_seconds": 295.2,
+      "whole_track": {
+        "integrated_lufs": -15.8,
+        "loudness_range_lu": 17.1,
+        "true_peak_dbfs": 0.1,
+        "mean_volume_db": -18.1,
+        "max_sample_volume_db": 0.0
+      },
+      "loud_intervals": [
+        {
+          "start_seconds": 134.1,
+          "end_seconds": 146.1,
+          "duration_seconds": 12,
+          "selection_short_term_lufs": -10.0,
+          "integrated_lufs": -13.2,
+          "loudness_range_lu": 9.4,
+          "true_peak_dbfs": 0.0,
+          "mean_volume_db": -14.2,
+          "max_sample_volume_db": 0.0
+        },
+        {
+          "start_seconds": 172.2,
+          "end_seconds": 184.2,
+          "duration_seconds": 12,
+          "selection_short_term_lufs": -10.2,
+          "integrated_lufs": -11.9,
+          "loudness_range_lu": 7.1,
+          "true_peak_dbfs": 0.1,
+          "mean_volume_db": -12.9,
+          "max_sample_volume_db": 0.0
+        },
+        {
+          "start_seconds": 220.4,
+          "end_seconds": 232.4,
+          "duration_seconds": 12,
+          "selection_short_term_lufs": -11.2,
+          "integrated_lufs": -13.9,
+          "loudness_range_lu": 15.5,
+          "true_peak_dbfs": -0.0,
+          "mean_volume_db": -16.8,
+          "max_sample_volume_db": -0.0
+        }
+      ]
+    }
+  ],
+  "recommended_balance": {
+    "louder_track": "netherworld.m4a",
+    "quieter_track": "overworld.m4a",
+    "whole_track_integrated_difference_lu": 0.5,
+    "loudest_excerpt_integrated_difference_lu": 1.5,
+    "additional_attenuation_db": -1.5,
+    "gain_multiplier": 0.841395,
+    "quieter_track_additional_gain_db": 0,
+    "applied_to_files": false,
+    "reason": "Match the louder of whole-track and loudest-excerpt differences, rounded up to the next 0.5 dB; do not boost the quieter track."
+  },
+  "portal_travel_review": {
+    "manifest_path": "C:\\Users\\Маркет\\.codex\\.chatgpt-projects\\g-p-6ad3d33c21b48191b3ef155d3e5fa762\\fortebank-video-audit\\private_asset_pack\\minecraft\\1.21.10\\manifest.json",
+    "current_manifest_entry": {
+      "kind": "sound",
+      "role": "portal_travel",
+      "event": "block.portal.travel",
+      "event_definition": {
+        "sounds": [
+          "portal/travel"
+        ],
+        "subtitle": "subtitles.block.portal.travel"
+      },
+      "selected_sound_name": "portal/travel",
+      "local_path": "assets/minecraft/sounds/portal/travel.ogg",
+      "source_type": "asset_object",
+      "source_entry_path": "minecraft/sounds/portal/travel.ogg",
+      "version": "1.21.10",
+      "asset_index_id": "27",
+      "asset_hash": "9022fcfb001438a87c65b268202a6abf5957b64a",
+      "sha1": "9022fcfb001438a87c65b268202a6abf5957b64a",
+      "size": 121443,
+      "duration_seconds": 9.5,
+      "recommended_gain": 0.09,
+      "recommended_playback_window_seconds": 0.8,
+      "original_bytes_unmodified": true
+    },
+    "current_effective_playback_range_seconds": [
+      0,
+      0.8
+    ],
+    "current_range_assumption": "Manifest has no source offset; range assumes default start at 0 seconds.",
+    "candidate_measurements": [
+      {
+        "start_seconds": 0,
+        "end_seconds": 1.25,
+        "duration_seconds": 1.25,
+        "integrated_lufs": -13.1,
+        "loudness_range_lu": 0.0,
+        "true_peak_dbfs": -2.2,
+        "mean_volume_db": -17.5,
+        "max_sample_volume_db": -2.2
+      },
+      {
+        "start_seconds": 0.6,
+        "end_seconds": 1.85,
+        "duration_seconds": 1.25,
+        "integrated_lufs": -11.1,
+        "loudness_range_lu": 0.0,
+        "true_peak_dbfs": -0.7,
+        "mean_volume_db": -14.5,
+        "max_sample_volume_db": -0.7
+      },
+      {
+        "start_seconds": 1.5,
+        "end_seconds": 2.75,
+        "duration_seconds": 1.25,
+        "integrated_lufs": -10.9,
+        "loudness_range_lu": 0.0,
+        "true_peak_dbfs": -0.7,
+        "mean_volume_db": -13.6,
+        "max_sample_volume_db": -0.7
+      },
+      {
+        "start_seconds": 3,
+        "end_seconds": 4.25,
+        "duration_seconds": 1.25,
+        "integrated_lufs": -11.9,
+        "loudness_range_lu": 0.0,
+        "true_peak_dbfs": -0.6,
+        "mean_volume_db": -14.3,
+        "max_sample_volume_db": -0.6
+      },
+      {
+        "start_seconds": 5,
+        "end_seconds": 6.25,
+        "duration_seconds": 1.25,
+        "integrated_lufs": -17.6,
+        "loudness_range_lu": 0.0,
+        "true_peak_dbfs": -6.2,
+        "mean_volume_db": -20.0,
+        "max_sample_volume_db": -6.2
+      },
+      {
+        "start_seconds": 7.5,
+        "end_seconds": 8.75,
+        "duration_seconds": 1.25,
+        "integrated_lufs": -33.9,
+        "loudness_range_lu": 0.0,
+        "true_peak_dbfs": -20.9,
+        "mean_volume_db": -36.9,
+        "max_sample_volume_db": -20.9
+      }
+    ],
+    "proposed_playback": {
+      "start_seconds": 5,
+      "end_seconds": 6.25,
+      "duration_seconds": 1.25,
+      "fade_in_seconds": 0.12,
+      "fade_out_seconds": 0.4,
+      "gain": 0.09,
+      "gain_db": -20.92,
+      "start_rationale": "Measured decaying section is 4.5 LU quieter than the original onset. Choose 1.25 seconds with a 0.12-second fade in and 0.40-second fade out; no listening performed.",
+      "original_asset_sha256": "0099a1c5ba6849ba6bcd97e1b0e95d5dd85595d1f87439fdcb355106982e39de",
+      "original_modified": false,
+      "manifest_modified": false,
+      "applied": false,
+      "measured_segment_integrated_lufs": -17.6,
+      "measured_segment_true_peak_dbfs": -6.2,
+      "estimated_peak_after_gain_dbfs": -27.12
+    }
+  }
+}

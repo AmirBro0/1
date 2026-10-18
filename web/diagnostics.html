@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Проверка оформления oko</title>
+  <style>
+    :root{color-scheme:dark;font-family:system-ui,sans-serif;background:#151a1b;color:#e4e9e5}
+    *{box-sizing:border-box}body{max-width:1080px;margin:0 auto;padding:32px 20px 60px;line-height:1.6}h1{font-size:26px;margin:0 0 12px}p{margin:10px 0;color:#c1cdc7}a{color:#b1d6bd;overflow-wrap:anywhere}.actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:22px 0}button{border:1px solid #6a8c77;border-radius:6px;padding:11px 16px;background:#284438;color:#eef6ef;font:inherit;font-weight:600;cursor:pointer}button:focus-visible,a:focus-visible,textarea:focus-visible{outline:3px solid #d5c587;outline-offset:4px}button:disabled{opacity:.5;cursor:wait}#status{color:#d8cd9d;min-height:26px}label{display:block;margin:24px 0 8px;font-weight:600}textarea{display:block;width:100%;height:370px;resize:vertical;background:#0c1112;color:#dce7df;border:1px solid #496053;border-radius:6px;padding:16px;font:13px/1.6 ui-monospace,Consolas,monospace;white-space:pre;tab-size:2}details{margin-top:24px}summary{cursor:pointer;color:#bdd2c3}iframe{display:block;width:100%;height:620px;margin-top:12px;border:1px solid #496053;background:#fff}small{color:#9aafa3}.notice{padding:13px 16px;background:#342c1a;border:1px solid #8b784b;color:#f4dfab;border-radius:6px}@media(max-width:600px){body{padding:22px 14px}h1{font-size:22px}textarea{font-size:11px;height:440px}iframe{height:560px}}
+  </style>
+</head>
+<body>
+  <h1>Проверка оформления oko</h1>
+  <p>Открой эту страницу в Chrome, где пропало оформление. Проверка покажет, какие файлы загружаются и какие стили применяет браузер.</p>
+  <p>Адрес проверки: <a id="diagnostic-url" href="/static/diagnostics.html">/static/diagnostics.html</a></p>
+  <p><small>Отчёт остаётся на этой странице. Ключ доступа, поля ввода, хранилища браузера, cookies и история не читаются. Отправки отчёта на сервер нет.</small></p>
+  <noscript><p class="notice">JavaScript отключён. Чтобы выполнить проверку, разреши JavaScript для этого локального сайта и обнови страницу.</p></noscript>
+  <div class="actions"><button id="run" type="button">Проверить снова</button><button id="copy" type="button" disabled>Скопировать отчёт</button><a href="/" target="_blank" rel="noopener">Открыть oko</a></div>
+  <p id="status" role="status" aria-live="polite">Подготовка проверки…</p>
+  <label for="report">Отчёт для разработчика</label>
+  <textarea id="report" readonly spellcheck="false" aria-describedby="report-hint"></textarea>
+  <p id="report-hint"><small>Если копирование недоступно, выдели текст отчёта и скопируй его вручную.</small></p>
+  <details open><summary>Приложение в этом браузере</summary><div id="preview"></div></details>
+  <script>
+  (function () {
+    'use strict';
+    var runButton=document.getElementById('run'),copyButton=document.getElementById('copy');
+    var report=document.getElementById('report'),status=document.getElementById('status'),preview=document.getElementById('preview');
+    var diagnosticUrl=location.origin+location.pathname;
+    var address=document.getElementById('diagnostic-url');address.href=diagnosticUrl;address.textContent=diagnosticUrl;
+    var lines=[],running=false;
+    function write(line){lines.push(line);report.value=lines.join('\n');}
+    function shortError(error){return error&&error.name?error.name:'неизвестная ошибка';}
+    function bool(value){return value?'да':'нет';}
+    function safePath(value){
+      var url=new URL(value,location.origin);var version=url.searchParams.get('v');
+      return url.pathname+(version?'?v='+encodeURIComponent(version):'');
+    }
+    function localUrl(value,base){
+      try{var url=new URL(value,base||location.origin);return url.origin===location.origin&&/^https?:$/.test(url.protocol)?url:null;}catch(error){return null;}
+    }
+    async function request(url){
+      var controller=new AbortController(),timer=setTimeout(function(){controller.abort();},10000);
+      try{return await fetch(url,{cache:'no-store',signal:controller.signal,redirect:'error'});}finally{clearTimeout(timer);}
+    }
+    function expectedMime(path){
+      if(/\.css$/i.test(path))return /^text\/css(?:;|$)/i;
+      if(/\.(?:m?js)$/i.test(path))return /^(?:application|text)\/(?:javascript|ecmascript)(?:;|$)/i;
+      if(/\.ttf$/i.test(path))return /^font\/ttf(?:;|$)/i;
+      if(/\.woff2?$/i.test(path))return /^font\/woff2?(?:;|$)/i;
+      if(/\.svg$/i.test(path))return /^image\/svg\+xml(?:;|$)/i;
+      if(/\.png$/i.test(path))return /^image\/png(?:;|$)/i;
+      return null;
+    }
+    async function checkFiles(markup){
+      var parsed=new DOMParser().parseFromString(markup,'text/html'),queue=[],seen=new Set(),failed=0;
+      function add(value,base){var url=localUrl(value,base);if(url&&!seen.has(url.href)&&queue.length<48){seen.add(url.href);queue.push(url);}}
+      parsed.querySelectorAll('link[rel="stylesheet"],link[as="font"],script[src],img.oko-wordmark').forEach(function(node){add(node.getAttribute('href')||node.getAttribute('src'));});
+      write('');write('ФАЙЛЫ (запросы без кэша):');
+      for(var i=0;i<queue.length;i++){
+        var url=queue[i];
+        try{
+          var response=await request(url.href),mime=response.headers.get('content-type')||'нет Content-Type',expected=expectedMime(url.pathname);
+          var ok=response.ok&&(!expected||expected.test(mime));if(!ok)failed++;
+          write((ok?'OK ':'ОШИБКА ')+response.status+' '+safePath(url.href)+' ['+mime+']');
+          if(response.ok&&/\.(?:css|m?js)$/i.test(url.pathname)){
+            var body=await response.text(),match;
+            if(/\.css$/i.test(url.pathname)){
+              var cssUrls=/url\(\s*['"]?([^'"\s)]+)['"]?\s*\)/g;
+              while((match=cssUrls.exec(body)))add(match[1],url.href);
+            }else{
+              var imports=/\b(?:import|export)\s+(?:[^;\n]*?\s+from\s*)?['"]([^'"]+)['"]/g;
+              while((match=imports.exec(body)))if(/^\.?\.\//.test(match[1])||match[1].charAt(0)==='/')add(match[1],url.href);
+            }
+          }else if(response.body){await response.body.cancel();}
+        }catch(error){failed++;write('ОШИБКА '+safePath(url.href)+' ['+shortError(error)+']');}
+      }
+      if(!queue.length){failed++;write('В HTML не найдены стили, шрифт, логотип или скрипты приложения.');}
+      return failed;
+    }
+    async function inspectFrame(){
+      preview.textContent='';var frame=document.createElement('iframe');frame.title='oko — проверка применённого оформления';
+      var loaded=new Promise(function(resolve){var done=false,timer=setTimeout(function(){if(!done){done=true;resolve(false);}},15000);frame.onload=function(){if(!done){done=true;clearTimeout(timer);resolve(true);}};});
+      frame.src='/?check='+Date.now()+'#welcome';preview.appendChild(frame);
+      if(!await loaded){write('ОШИБКА: приложение во встроенном окне не загрузилось за 15 секунд.');return 1;}
+      try{
+        var win=frame.contentWindow,doc=frame.contentDocument;
+        await Promise.race([doc.fonts?doc.fonts.ready:Promise.resolve(),new Promise(function(resolve){setTimeout(resolve,6000);})]);
+        await new Promise(function(resolve){setTimeout(resolve,1200);});
+        write('');write('ПРИМЕНЁННОЕ ОФОРМЛЕНИЕ:');
+        write('Документ: '+doc.title);
+        write('Мир: '+(doc.documentElement.getAttribute('data-world')||'отсутствует'));
+        write('Шрифт body: '+(doc.body?win.getComputedStyle(doc.body).fontFamily:'нет body'));
+        var pixelFaces=[];if(doc.fonts)doc.fonts.forEach(function(font){if(/Pixel/i.test(font.family))pixelFaces.push(font.family+': '+font.status);});
+        var fontLoaded=!!(doc.fonts&&doc.fonts.check('12px Pixel')&&pixelFaces.some(function(value){return /: loaded$/.test(value);}));
+        write('Шрифт Pixel загружен: '+bool(fontLoaded)+(pixelFaces.length?' ('+pixelFaces.join(', ')+')':''));
+        var sign=doc.querySelector('.wood-sign'),style=sign?win.getComputedStyle(sign):null;
+        write('Деревянная табличка: '+bool(!!sign));
+        var signStyled=!!(style&&style.backgroundImage!=='none'&&parseFloat(style.borderTopWidth)>0&&style.borderTopStyle!=='none'&&style.boxShadow!=='none');
+        if(style){write('Текстура таблички: '+style.backgroundImage);write('Граница таблички: '+style.borderTopWidth+' '+style.borderTopStyle+' '+style.borderTopColor);write('Тень таблички: '+style.boxShadow);}
+        write('Оформление таблички применено: '+bool(signStyled));
+        var logo=doc.querySelector('img.oko-wordmark');write('Логотип загружен: '+bool(!!(logo&&logo.complete&&logo.naturalWidth)));
+        if(logo){var logoStyle=win.getComputedStyle(logo);write('Фильтр логотипа: '+logoStyle.filter);}
+        var greeting=doc.getElementById('typed-message'),greetingPresent=!!(greeting&&greeting.textContent.trim());
+        write('Приветствие заполнено: '+bool(greetingPresent));
+        var canvas=doc.getElementById('landscape');write('Canvas фона: '+(canvas?canvas.width+'×'+canvas.height:'отсутствует'));
+        var canvasInitialized=!!(canvas&&canvas.width===480&&canvas.height===270),backgroundDrawn=null;
+        write('JS фона инициализирован: '+bool(canvasInitialized));
+        if(canvas){var canvasStyle=win.getComputedStyle(canvas);write('Фон canvas (CSS): '+canvasStyle.backgroundImage);write('Фильтр canvas: '+canvasStyle.filter);}
+        if(canvasInitialized){
+          try{
+            var context=canvas.getContext('2d'),samples=new Set(),opaque=0;
+            [[.15,.15],[.5,.25],[.85,.7],[.2,.85],[.75,.9]].forEach(function(point){var pixel=context.getImageData(Math.floor(canvas.width*point[0]),Math.floor(canvas.height*point[1]),1,1).data;if(pixel[3])opaque++;samples.add(Array.from(pixel).join(','));});
+            backgroundDrawn=opaque>0&&samples.size>1;write('В canvas нарисован неоднородный фон: '+bool(backgroundDrawn));
+          }catch(error){write('Проверка рисунка canvas недоступна: '+shortError(error));}
+        }
+        var styleLinks=Array.from(doc.querySelectorAll('link[rel="stylesheet"]')),stylesConnected=styleLinks.length>0&&styleLinks.every(function(link){return !!link.sheet;});
+        write('Стили документа: '+styleLinks.map(function(link){return safePath(link.href)+'='+(link.sheet?'подключён':'НЕ подключён');}).join('; '));
+        var media=['(forced-colors: active)','(prefers-contrast: more)','(prefers-reduced-motion: reduce)','(prefers-color-scheme: dark)'];
+        media.forEach(function(query){write(query+': '+bool(win.matchMedia(query).matches));});
+        return (!fontLoaded||!signStyled||!greetingPresent||!canvasInitialized||backgroundDrawn===false||!stylesConnected||!logo||!logo.naturalWidth)?1:0;
+      }catch(error){write('ОШИБКА чтения оформления: '+shortError(error));return 1;}
+    }
+    async function run(){
+      if(running)return;running=true;runButton.disabled=true;copyButton.disabled=true;lines=[];
+      status.textContent='Проверяем файлы и оформление. Обычно это занимает несколько секунд…';
+      write('Проверка оформления oko');write('Адрес приложения: '+location.origin+'/');write('Адрес проверки: '+diagnosticUrl);
+      write('Браузер: '+navigator.userAgent);write('Окно: '+innerWidth+'×'+innerHeight+'; devicePixelRatio='+devicePixelRatio);
+      var problems=0;
+      try{
+        var response=await request('/');write('HTML: '+response.status+'; версия='+String(response.headers.get('x-ui-version')||'отсутствует')+'; тип='+String(response.headers.get('content-type')||'отсутствует'));
+        if(!response.ok)throw new Error('HTTP '+response.status);
+        var markup=await response.text();problems+=await checkFiles(markup);problems+=await inspectFrame();
+        status.textContent=problems?'Проверка завершена. В отчёте есть отклонения — скопируй его для разбора.':'Файлы и основные элементы оформления загружаются. Скопируй отчёт, если внешний вид всё ещё отличается.';
+      }catch(error){write('ОШИБКА загрузки страницы: '+shortError(error));status.textContent='Не удалось закончить проверку. Скопируй полученный отчёт.';}
+      finally{running=false;runButton.disabled=false;copyButton.disabled=false;}
+    }
+    runButton.addEventListener('click',run);
+    copyButton.addEventListener('click',async function(){
+      try{if(!navigator.clipboard)throw new Error('Clipboard unavailable');await navigator.clipboard.writeText(report.value);status.textContent='Отчёт скопирован.';}
+      catch(error){report.focus();report.select();status.textContent='Текст выделен. Нажми Ctrl+C, чтобы скопировать отчёт.';}
+    });
+    run();
+  }());
+  </script>
+</body>
+</html>

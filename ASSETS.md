@@ -1,0 +1,47 @@
+# Источники визуальных и звуковых материалов
+
+`web/assets/branding/oko-wordmark.svg` — собственный векторный пиксельный логотип для деревянной таблички: объёмные золотистые буквы oko и небольшие линзы в o. Геометрия создана кодом, внешние шрифты и растровая генерация для логотипа не использованы. Размер и отступы на узких экранах задаёт `web/branding.css`.
+
+## Текущие сцены после интеграции
+
+Сохранены прежние композиции `web/assets/worlds/overworld.png`, `nether.png` и `end.png`. Для уменьшения мелкой фактуры `web/worlds.js` один раз усредняет каждый фон до 480×270; CSS масштабирует его с `image-rendering: pixelated`, сохраняя блочную графику. Коррекция применяется только к слоям пейзажа: Overworld — насыщенность 92%, яркость 97% и лёгкое нейтральное наложение; Nether — 78% и 88% с тёмным наложением; End — 55% и 82% с тёмным наложением. Интерфейс этими фильтрами не затрагивается. Исходные файлы и их контрольные суммы сохранены; коррекция не записана в PNG. Альтернативный мягкий фон `web/assets/worlds/overworld-soft.png` сохранён, но не используется; точный промпт и происхождение — в `qa/overworld-soft-prompt.txt`. End изображает фиолетовую пустоту, острова из светлого камня, обсидиановые башни и хорусы. Спокойные частицы остаются отдельным слоем и маскируются в области интерфейса. Листва не вырезается из изображений, фон не перерисовывается на каждом кадре.
+
+`web/end-scene.svg` — собственная векторная пиксельная сцена: парящий остров с фактурным камнем, двенадцать глаз на рамке, звёздная поверхность портала и две блочные фигуры. Общая композиция следует приложенному пользователем визуальному референсу; игровые файлы в SVG не вставлялись. Весь остров служит доступной с клавиатуры кнопкой входа в титры. Текст титров перенесён из `content/CREDITS_RU.json` творческого пакета; он не содержит End Poem.
+
+## Созданные пейзажи
+
+Все PNG созданы встроенным `image_gen` для этого проекта, не CLI. Для нового End использованы прежние Overworld и Nether как референсы стиля. Новый мягкий Overworld создан по прежнему изображению как референсу окружения и пиксельного стиля; палитра и композиция сгенерированы заново. Изображения сохранены в проекте и проверены визуально; при работе приложение обращается только к локальным файлам. Происхождение музыки и шрифтов сохранено ниже.
+
+`web/assets/textures/*.svg`, SVG гаст и пиксельные иконки в `web/index.html` — собственные материалы проекта. Короткие SFX по умолчанию синтезируются Web Audio в `web/audio.js`; это не музыка и не копии аудиофайлов Minecraft.
+
+`web/assets/fonts/PressStart2P-Regular.ttf` — [Press Start 2P из репозитория Google Fonts](https://github.com/google/fonts/tree/main/ofl/pressstart2p), SIL Open Font License 1.1, копия лицензии рядом в `OFL.txt`. Файл загружается с этого сервера, внешнего Google Fonts запроса во время работы нет. Проверены все русские буквы, включая ё/й/Ё/Й, цифры и знаки таймкода.
+
+## Приватный пакет Minecraft Java Edition
+
+Локальная установленная версия — 1.21.10 release, assets index 27. `private_asset_pack/minecraft/1.21.10/manifest.json` содержит точный JAR entry или объектный SHA-1, версию, путь, рекомендации громкости и окна воспроизведения. Скопированы только 20 PNG, 3 mcmeta и 4 OGG. Аккаунты, токены, миры и файлы launcher не читались.
+
+Использованы реальные события: `ui.button.click`, `block.portal.travel`, `block.wood.fall`, `entity.experience_orb.pickup`. Последнее выбрано приложением как сигнал завершения анализа; отдельного такого события Minecraft нет. Исходный portal travel длится 9,5 с, приложение использует участок 5,00–6,25 с с плавной огибающей до 0,09 (portalVolume 0,18 × отдельное ослабление 0,5), синхронно с визуальным переходом.
+
+[Minecraft Usage Guidelines](https://www.minecraft.net/en-us/usage-guidelines) не дают общего разрешения использовать бренд и игровые материалы для продвижения посторонних коммерческих услуг. Поэтому оригинальные файлы игры выключены по умолчанию и исключены из публичной сборки. Перед публичным включением этого пакета нужны разрешения либо замена его текстур и четырёх SFX собственными или лицензированными аналогами. Игра не изменялась; проект не представлен как официальный продукт Mojang/Microsoft.
+
+## Промпты созданных пейзажей
+
+### Overworld
+
+Use case: stylized-concept. Asset type: original pixel-art web background, no UI. A crafted 16-bit voxel fantasy landscape inspired by block-building games, wide panoramic side view. Bright pale cyan sky, long stepped white clouds, distant hazy square mountains and floating terrain, lush deep green cubic oak trees framing left and right edges, blocky grass-topped dirt terraces across bottom, a small turquoise stream glinting in lower right, wildflowers and grasses. Perspective is coherent 2.5D, clear hard pixel edges and restrained 32-color palette, original textures rather than copying game files. Center upper and center middle mostly quiet open sky to place a hanging wooden sign and inputs. Landscape occupies lower quarter and edges. Sunlit serene greens and blue, beautiful handcrafted game background. No characters, no text, no logo, no signs, no portal, no interface, no rounded forms, no blur. All details aligned to a crisp low-resolution pixel grid, visually like 640x360 art scaled with nearest neighbor. 16:9 composition.
+
+### Nether
+
+Use case: stylized-concept. Asset type: original pixel-art web background, no UI. A crafted 16-bit voxel underworld landscape with a coherent 2.5D side perspective. Dark burgundy and umber cavern, vast stepped basalt cliffs at left and right edges, distant imposing blackstone fortress bridge with crenellations across mid-distance, red-brown cubic brick bastion towers, a few gold insets, orange lava rivers snaking across bottom and tiny falling lava streams at far sides. Mostly quiet dark red space in center upper and center middle reserved for a web workspace. Foreground blocky black basalt and red netherrack along bottom. Amber lava light, smoky depth, sparse embers. Crisp large pixel edges on a consistent low-resolution grid, restrained 28-color palette, no smooth 3D render, no blur, no purple space. Original art inspired by block-building games, no copied textures. No characters, no text, no logo, no interface. Panoramic 16:9 composition.
+
+### End
+
+Use case: stylized-concept. Asset type: wide 16:9 full-screen pixel-art landscape background for a web application. Primary request: Create the third world, The End, as a companion background to the two reference images. Input image 1 (Overworld) and image 2 (Nether fortress) are STYLE REFERENCES ONLY. Match their rich, polished, finely detailed voxel pixel-art game environment, broad panoramic composition, depth, crisp block pixels and atmospheric lighting. Do not copy their subjects. Scene: the End dimension, endless very dark violet starry void, pale yellow end-stone floating block islands stepping down in foreground at left and right edges, distant floating islands in purple atmospheric haze, tall obsidian pillars in far distance, a few branching purple chorus plants on the side ledges, tiny violet particles. Keep the central upper and middle 60 percent quiet and dark for readable application panels; concentrate beautifully detailed block terrain along the lower edge and side corners, with a visible serene horizon into deep space. Palette: midnight plum and dark indigo void, pale cream yellow-green stone lit by lavender and muted teal starlight, obsidian purple-black. No interface, no panels, no writing, no characters, no logos, no watermark. Landscape 16:9. This is the actual scene backdrop, with the same visual quality as the two references.
+
+## Музыка пользователя
+
+`web/assets/music/overworld.m4a`, `netherworld.m4a`, `end.m4a` и `titles.m4a` скопированы из вложений пользователя без изменения байтов. Контрольные суммы, назначение дорожек и коэффициенты баланса сохранены в `ASSET_MANIFEST.json`; измерения прежних дорожек — в `qa/music_measurements.json`. Эти файлы не скачивались из сети. Предоставление пользователем файлов не подтверждает лицензию для публичного распространения. Текущий просмотр локальный; публикация музыки не выполнялась. Указанные треки легко заменяются путями в `web/config.js`.
+
+End использует `end.m4a` с громкостью **8%**, титры — `titles.m4a` с громкостью **10%** при стандартной настройке музыки. Более тихая сохранённая пользователем настройка остаётся верхним пределом; повторного умножения этих процентов на общую громкость 10% нет. Музыка проходит через одну ступень громкости медиаплеера. Существующее приглушение во время видео умножает уровень на 0,30 (End 2,4%, титры 3%); после видео обычная громкость возвращается. При первом открытии звук выключен до выбора пользователя. Пауза титров, скрытие страницы и общий mute останавливают воспроизведение. Плавные переходы и исходная скорость дорожек сохранены.
+
+`qa/end_titles_audio_check.py` проверяет реальные M4A в Edge без пользовательского ключа и загрузки видео: декодирование, целевые уровни, переход End → титры, паузу, приглушение, mute и возврат после события видимости. Результаты с длительностями и SHA-256 — `qa/end-titles-audio-results.json`.

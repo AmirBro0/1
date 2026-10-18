@@ -1,0 +1,21 @@
+{
+  "checks": [
+    "seven-records-split-3-3-1-and-disabled-boundaries",
+    "previous-navigation-restores-expected-records",
+    "search-starts-at-first-page",
+    "status-and-review-filters-reset-page",
+    "sort-resets-page-and-changes-order",
+    "deleting-last-item-of-last-page-returns-to-valid-page",
+    "empty-search-has-single-page-and-disabled-navigation"
+  ],
+  "passed": 7,
+  "javascript_errors": [],
+  "fixture_records": 7,
+  "archive_request_limit": 3,
+  "offsets": [
+    0,
+    3,
+    6
+  ],
+  "real_api_requests": 0
+}

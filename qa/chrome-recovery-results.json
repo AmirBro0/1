@@ -1,0 +1,9 @@
+{
+  "chrome": "passed",
+  "revision": "c87677e0fed61960",
+  "font_content_type": "font/ttf",
+  "page_errors": [],
+  "missing_assets": [],
+  "reload": "passed",
+  "static_background_and_greeting_fallback": "passed"
+}

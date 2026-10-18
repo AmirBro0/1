@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ru" data-world="overworld">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#91a7a2">
+  <title>oko — проверка кассового видео</title>
+  <link rel="preload" href="/static/assets/fonts/PressStart2P-Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="/static/styles.css">
+  <link rel="stylesheet" href="/static/controls-refresh.css">
+  <link rel="stylesheet" href="/static/worlds-refresh.css">
+  <link rel="stylesheet" href="/static/ui-refresh.css">
+  <link rel="stylesheet" href="/static/branding.css">
+</head>
+<body>
+  <div class="world-backdrop" aria-hidden="true"><canvas id="landscape" width="640" height="360"></canvas><canvas id="atmosphere" width="640" height="360"></canvas></div>
+  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-back" viewBox="0 0 24 24"><path d="M10 4H7v3H4v3H1v4h3v3h3v3h3v-6h12v-4H10z"/></symbol>
+    <symbol id="i-forward" viewBox="0 0 24 24"><path d="M14 4h3v3h3v3h3v4h-3v3h-3v3h-3v-6H2v-4h12z"/></symbol>
+    <symbol id="i-sound" viewBox="0 0 24 24"><path d="M2 9h5V6h3V3h4v18h-4v-3H7v-3H2zm15-3h3v3h2v6h-2v3h-3v-3h2V9h-2z"/></symbol>
+    <symbol id="i-muted" viewBox="0 0 24 24"><path d="M2 9h5V6h3V3h4v18h-4v-3H7v-3H2zm15-1h3v3h3v3h-3v3h-3v-3h-3v-3h3z"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M5 2h4v3h4v3h4v3h4v2h-4v3h-4v3H9v3H5z"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><path d="M4 3h6v18H4zm10 0h6v18h-6z"/></symbol>
+    <symbol id="i-zoom" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M4 1h10v3h3v10h-3v3H4v-3H1V4h3zm2 4v8h7V5zm9 10h4v3h3v4h-4v-3h-3z"/></symbol>
+    <symbol id="i-fullscreen" viewBox="0 0 24 24"><path d="M1 1h9v3H4v6H1zm13 0h9v9h-3V4h-6zM1 14h3v6h6v3H1zm19 0h3v9h-9v-3h6z"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><path d="M9 2h6v5H9zm0 8h6v12H9z"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M6 4h12v3h3v3h3v4h-3v3h-3v3H6v-3H3v-3H0v-4h3V7h3zm3 4v8h6V8z"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M10 0h4v7h3v3h7v4h-7v3h-3v7h-4v-7H7v-3H0v-4h7V7h3z"/></symbol>
+    <symbol id="i-key" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M4 1h8v3h3v8h-3v3H8v4H5v4H0v-7h3v-4H1V4h3zm2 4v5h5V5z"/></symbol>
+    <symbol id="i-theme" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M7 1h10v3h4v3h3v10h-3v4h-4v3H7v-3H3v-4H0V7h3V3h4zm5 4v14h4v-3h3V8h-3V5z"/></symbol>
+  </svg>
+  <nav class="game-nav" aria-label="Навигация приложения">
+    <div class="nav-left"><button class="game-button icon-button" id="back-button" type="button" aria-label="Вернуться к приветствию" title="Вернуться к приветствию" disabled><svg><use href="#i-back"/></svg></button><a href="#welcome" class="nav-brand" id="brand-link"><span class="brand-gem" aria-hidden="true"></span><span data-project-name>oko</span></a></div>
+    <div class="nav-location"><span class="location-dot"></span><span id="scene-name">Приветствие</span><span class="nav-world" id="world-label">OVERWORLD</span></div>
+    
+    <div class="nav-actions"><button id="nav-analysis" class="game-button icon-button" type="button" aria-label="Новая проверка видео" title="Новая проверка видео" hidden><svg><use href="#i-spark"/></svg></button><button class="game-button icon-button" id="theme-toggle" type="button" aria-label="Включить светлую тему" title="Тема панелей"><svg><use href="#i-theme"/></svg></button><button class="game-button icon-button motion-button" id="motion-toggle" type="button" aria-label="Отключить декоративное движение" aria-pressed="false" title="Декоративное движение"><svg><use href="#i-spark"/></svg></button><button class="game-button icon-button" id="sound-toggle" type="button" aria-label="Включить звуки сайта" aria-pressed="false" title="Звуки сайта"><svg><use href="#i-muted"/></svg></button><button class="game-button icon-button" id="info-button" type="button" aria-label="О приложении" title="О приложении"><svg><use href="#i-info"/></svg></button><button id="nav-history" class="game-button icon-button end-nav-arrow" type="button" aria-label="Перейти в End — история проверок" title="Перейти в End — история проверок" hidden><svg aria-hidden="true"><use href="#i-forward"/></svg></button></div>
+  </nav>
+  <main>
+    <section id="welcome-scene" class="scene welcome-scene" aria-labelledby="project-title">
+      <div class="intro-composition" id="intro-composition">
+        <div class="scene-eyebrow"><span></span> ВАШ ПОСТ НАБЛЮДЕНИЯ <span></span></div>
+        <div class="sign-rig"><div class="wood-beam"></div><div class="sign-chain left"></div><div class="sign-chain right"></div><div class="wood-sign"><span class="sign-rivet r1"></span><span class="sign-rivet r2"></span><span class="sign-rivet r3"></span><span class="sign-rivet r4"></span><p class="sign-overline">КАССОВАЯ ДИСЦИПЛИНА</p><h1 id="project-title" aria-label="oko"><img class="oko-wordmark" src="/static/assets/branding/oko-wordmark.svg" alt="" aria-hidden="true"><span class="sr-only" data-project-name>oko</span></h1><span class="sign-subtitle">ВИДЕО ПОД КОНТРОЛЕМ</span></div></div>
+        <p class="welcome-message" aria-label="Добро пожаловать на пост наблюдения"><span id="typed-message">&gt; Добро пожаловать на пост наблюдения.</span><span class="typing-cursor" aria-hidden="true">_</span></p>
+        <form id="welcome-form" class="key-form">
+          <label for="api-key">КЛЮЧ ДОСТУПА</label>
+          <div class="key-field"><svg class="key-icon"><use href="#i-key"/></svg><input id="api-key" type="password" autocomplete="off" placeholder="Введите API-ключ" required spellcheck="false" aria-describedby="welcome-error"><button id="key-visibility" type="button" aria-label="Показать ключ" title="Показать ключ"><svg><use href="#i-eye"/></svg></button></div>
+          <p id="welcome-error" class="form-error" role="alert" hidden></p>
+          <button id="start-button" class="game-button start-button" type="submit"><svg><use href="#i-play"/></svg>START ANALYSIS</button>
+          <span class="next-hint">Далее — загрузка видео <span aria-hidden="true">→</span></span>
+        </form>
+      </div>
+      <div class="world-caption"><span class="tiny-pixel-flower" aria-hidden="true"></span> НОВЫЙ МИР. ТОЧНЫЙ ВЗГЛЯД.</div>
+    </section>
+    <section id="workspace-scene" class="scene workspace-scene" hidden aria-labelledby="workspace-title">
+      <header class="workspace-heading"><div><p class="scene-eyebrow">ПОСТ НАБЛЮДЕНИЯ <span class="eyebrow-slash">/</span> NETHER</p><h2 id="workspace-title" class="sr-only">Анализ кассового видео</h2><button id="upload-button" class="upload-title" type="button" aria-label="UPLOAD — выбрать видео"><span aria-hidden="true" class="upload-letters"><span style="--n:0">U</span><span style="--n:1">P</span><span style="--n:2">L</span><span style="--n:3">O</span><span style="--n:4">A</span><span style="--n:5">D</span></span><span class="upload-plus" aria-hidden="true">+</span></button></div><p class="upload-hint sr-only"><span id="file-limits">Форматы и лимиты после входа</span></p></header>
+      <input type="file" id="video-file" accept=".mov,.qt,.mp4,.m4v,.avi,.mkv,.webm,video/*" hidden>
+      <p id="analysis-scope" class="analysis-scope"><span class="scope-label">Проверка видео</span><span>Возможности сервиса загружаются…</span></p>
+      <div class="workspace-grid">
+        <div class="video-column">
+          <section class="player-panel nether-frame" aria-label="Видеоплеер">
+            <div class="panel-topline"><span><span class="record-indicator"></span> ЛОКАЛЬНАЯ ЗАПИСЬ</span><span id="video-resolution">— × —</span></div>
+            <div id="player-container" class="player-container">
+              <div class="video-stage" id="drop-zone" tabindex="0" aria-label="Область видео. Нажмите Enter для выбора файла или перетащите файл .mov">
+                <video id="video" preload="metadata" playsinline hidden></video>
+                <div id="empty-state" class="empty-state">
+                  <svg class="ghast" viewBox="0 0 80 92" role="img" aria-label="Грустный пиксельный гаст" shape-rendering="crispEdges"><path fill="#665d67" d="M14 8h47v4h7v48h-7v5H14v-5H7V15h7z"/><path fill="#c5c2bd" d="M14 12h44v5h6v39h-6v5H14v-5H11V19h3z"/><path fill="#e7e5dc" d="M14 12h39v5h5v33H14z"/><path fill="#b1aca8" d="M19 18h8v4h-8zm24 4h10v4H43zM16 43h8v4h-8zm32 6h6v4h-6z"/><path fill="#514957" d="M21 31h9v4h-9zm21 0h9v4h-9zm-9 12h8v3h-8z"/><g class="tentacles" fill="#d6d1c9"><path d="M17 61h6v15h-3v6h-5v-8h2zM30 61h6v20h-3v5h-5v-9h2zM43 61h6v13h4v7h-6v-5h-4zM56 61h6v17h-6z"/></g></svg>
+                  <h3>Ничего не загружено</h3><p>Нажмите UPLOAD или перетащите видео сюда</p><span class="drop-format">.MOV</span>
+                </div>
+                <div id="playback-error" class="playback-error" role="status" hidden>Браузер не воспроизводит кодек этого .mov.<br>Видео можно отправить на анализ; кадры будут доступны в результате.</div>
+                <span id="zoom-badge" class="zoom-badge" hidden>2×</span>
+              </div>
+              <div class="player-controls" id="player-controls">
+                <button type="button" class="game-button icon-button" id="play-button" aria-label="Воспроизвести" title="Воспроизвести (Пробел)" disabled><svg><use href="#i-play"/></svg></button>
+                <button type="button" class="game-button icon-button" id="video-mute" aria-label="Выключить звук видео" title="Звук видео (M)" disabled><svg><use href="#i-sound"/></svg></button>
+                <span class="video-time"><span id="current-time">00:00</span><span class="time-divider">/</span><span id="duration">00:00</span></span>
+                <input id="video-progress" type="range" min="0" max="100" step="0.1" value="0" aria-label="Позиция воспроизведения" disabled>
+                <button type="button" class="game-button zoom-button" id="zoom-button" aria-label="Увеличить видео до 2×" title="Лупа: 1× / 2× (Z)" disabled><svg><use href="#i-zoom"/></svg><span>1×</span></button>
+                <button type="button" class="game-button icon-button" id="fullscreen-button" aria-label="Полноэкранный режим" title="Полноэкранный режим (F)" disabled><svg><use href="#i-fullscreen"/></svg></button>
+              </div>
+            </div>
+          </section>
+          <div class="file-toolbar"><div class="selected-file"><span class="file-cube" aria-hidden="true"></span><div><span id="file-name">Выберите запись для проверки</span><small id="file-meta">Файл останется внутри локального сервиса</small></div></div><button type="button" id="clear-video" class="game-button secondary-button" disabled>Убрать видео</button><button type="button" id="analyze-button" class="game-button analyze-button" disabled><svg><use href="#i-spark"/></svg>ПРОВЕРИТЬ ВИДЕО</button></div>
+          <div class="analysis-status" id="analysis-status" role="status" aria-live="polite"><span class="status-light"></span><span id="status-text">Готов к загрузке видео</span></div>
+          <p id="analysis-error" class="analysis-error" role="alert" hidden></p>
+          <div id="report-tools" class="report-tools" aria-label="Отчёт и таймлайн"></div>
+        </div>
+        <aside class="chat-panel" aria-labelledby="chat-title"><header class="chat-header"><div><span class="chat-mark" aria-hidden="true">▤</span><h2 id="chat-title">Отметки</h2><span id="event-count" class="event-count">0</span></div><p>Сигналы алгоритма<br>для проверки человеком</p></header><div id="chat-log" class="chat-log" role="log" aria-live="polite" aria-relevant="additions"><div class="chat-empty" id="chat-empty"><span class="chat-empty-glyph" aria-hidden="true">&gt;_</span><p>Здесь появятся<br>отмеченные эпизоды</p><span>СНАЧАЛА ЗАГРУЗИТЕ ВИДЕО</span></div></div><button id="new-events" class="new-events" type="button" hidden>Новые отметки ↓</button><footer class="chat-footer"><span class="online-dot"></span> СИСТЕМА НАБЛЮДЕНИЯ<span>LOCAL</span></footer></aside>
+      </div>
+      <footer class="workspace-footer"><span><span class="footer-block" aria-hidden="true"></span> ВИДЕОАНАЛИЗ В ЛОКАЛЬНОМ КОНТУРЕ</span><span>ВЫВОДЫ ПРОВЕРЯЕТ ЧЕЛОВЕК</span></footer>
+    </section>
+    <section id="archive-scene" class="scene archive-scene" hidden aria-labelledby="archive-title">
+      <header class="archive-heading"><div><p class="scene-eyebrow">СОХРАНЁННЫЕ ПРОВЕРКИ / END</p><h1 id="archive-title">История</h1><p>Видео, отчёты и ваши отметки просмотра.</p></div></header>
+      <div class="archive-panel">
+        <div class="archive-controls"><label>Поиск<input id="archive-search" type="search" placeholder="Название видео" autocomplete="off"></label><label>Статус<select id="archive-filter"><option value="all">Все проверки</option><option value="queued">В очереди</option><option value="processing">Проверяются</option><option value="done">Завершены</option><option value="failed">С ошибкой</option><option value="cancelled">Отменены</option></select></label><label>Просмотр<select id="archive-review-filter"><option value="all">Все</option><option value="not_reviewed">Не просмотрены</option><option value="in_review">На проверке</option><option value="reviewed">Просмотрены</option></select></label><label>Порядок<select id="archive-sort"><option value="desc">Сначала новые</option><option value="asc">Сначала старые</option></select></label><button id="archive-refresh-button" class="game-button" type="button">Обновить</button></div>
+        <p id="archive-status" role="status" aria-live="polite"></p><p id="archive-error" class="analysis-error" role="alert" hidden></p>
+        <div id="archive-empty" class="archive-empty"><span aria-hidden="true">◇</span><h2>Здесь будут ваши проверки</h2><p>Проверьте видео. Здесь сохранятся запись, отчёт и ваши отметки.</p></div>
+        <div id="archive-list" class="archive-list"></div>
+        <div class="archive-pagination"><button id="archive-prev" class="game-button" type="button" disabled>← Назад</button><span id="archive-page">1</span><button id="archive-next" class="game-button" type="button" disabled>Далее →</button></div>
+      </div>
+      <footer class="end-exit-footer"><button id="end-exit-button" class="end-portal-button" type="button" aria-label="Войти в портал — титры команды"><img src="/static/end-scene.svg" alt="Парящий остров с порталом в звёздную пустоту" loading="lazy"><span>Войти в портал</span></button><p>История команды · можно пропустить</p></footer>
+    </section>
+    <section id="credits-scene" class="scene credits-scene" hidden aria-label="Титры команды">
+      <div class="credits-controls"><button id="credits-pause" class="game-button" type="button">Пауза</button><button id="credits-skip" class="game-button" type="button">Пропустить</button><button id="credits-sound-toggle" class="game-button icon-button" type="button" aria-label="Включить звуки сайта" aria-pressed="false"><svg><use href="#i-muted"/></svg></button></div>
+      <p class="credits-hint">Пробел — пауза · Escape — пропустить</p><div id="credits-scroll" class="credits-scroll" tabindex="0" aria-label="История команды"><div id="credits-content" class="credits-content"></div></div><p id="credits-error" role="status" hidden></p>
+    </section>
+  </main>
+  <div id="portal-transition" class="portal-transition" hidden aria-label="Переход между мирами"><canvas id="portal-canvas" width="320" height="180" aria-hidden="true"></canvas><button class="game-button icon-button portal-sound-toggle" id="portal-sound-toggle" type="button" aria-label="Включить звуки сайта" aria-pressed="false"><svg><use href="#i-muted"/></svg></button><button class="game-button skip-transition" id="skip-transition" type="button">Пропустить эффект →</button></div>
+  <dialog id="info-dialog" class="game-dialog"><button class="game-button dialog-close" type="button" data-close>×</button><p class="dialog-kicker">ПОСТ НАБЛЮДЕНИЯ</p><h2>Каждый эпизод —<br>под вашим контролем</h2><p>Загрузите видео и запустите доступную проверку. Отметки появятся справа: нажмите на таймкод, чтобы перейти к нужному моменту.</p><p>Лупа переключает 1× / 2×. Пробел — пауза, ← / → — 5 секунд, F — полный экран, M — звук видео.</p><p class="dialog-note">Сейчас доступен локальный алгоритм перекрытия камеры V13. LLM не подключена. Сигналы алгоритма проверяет человек. Неофициальный проект, не связан с Mojang или Microsoft.</p><button type="button" class="game-button" data-close>ПОНЯТНО</button></dialog>
+  <dialog id="evidence-dialog" class="game-dialog evidence-dialog"><button class="game-button dialog-close" type="button" data-close>×</button><img id="evidence-image" alt="Кадр-доказательство"><p id="evidence-caption"></p></dialog>
+  <noscript>Для загрузки видео и управления плеером включите JavaScript.</noscript>
+  <script type="module" src="/static/app.js"></script>
+</body>
+</html>

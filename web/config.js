@@ -1,0 +1,42 @@
+export const CONFIG = Object.freeze({
+  projectName: 'oko', greeting: '> Добро пожаловать на пост наблюдения.',
+  pollIntervalMs: 1500, jobTimeoutMs: 300000,
+  audio: {
+    musicVolume: .10, musicWhileVideoVolume: .03, musicDuckMultiplier: .30, portalVolume: .16, uiVolume: .08,
+    firstFadeMs: 1200, outgoingFadeMs: 400, incomingFadeMs: 1000,
+    duckFadeMs: 300, restoreFadeMs: 750, loopEdgeMs: 200, skipTailMs: 90,
+    tracks: {
+      overworld: {url: new URL('./assets/music/overworld.m4a', import.meta.url).href, balance: 1},
+      nether: {url: new URL('./assets/music/netherworld.m4a', import.meta.url).href, balance: .841395},
+      end: {url: new URL('./assets/music/end.m4a', import.meta.url).href, volume: .08, balance: 1},
+      credits: {url: new URL('./assets/music/titles.m4a', import.meta.url).href, volume: .10, balance: 1},
+    },
+    portal: {offsetSeconds: 5, durationSeconds: 1.25, startMs: 320,
+      humStartMs: 50, approachMs: 350, accentStartMs: 700, crossingMs: 900, tailEndMs: 1700,
+      assetFadeInMs: 120, assetTailStartMs: 850, assetApproachGain: .2, assetTailGain: .45,
+      humApproachGain: .07, humPeakGain: .12, fallbackAccentGain: .16, assetAttenuation: .5},
+    ui: {fadeInMs: 12, fadeOutMs: 60, completeDurationMs: 650, durationMs: 350,
+      fallbackGain: .22, fallbackAttackMs: 8, fallbackDurationMs: 70, noteSpacingMs: 65},
+  },
+  portal: {
+    durationMs: 2000, calmDurationMs: 220, signExitMs: 250, approachEndMs: 700,
+    crossingEndMs: 1200, switchMs: 1350, revealMs: 1650, gridWidth: 320, gridHeight: 180,
+    endDurationMs: 900, endSwitchMs: 460,
+  },
+  credits: {url: new URL('./content/credits.json', import.meta.url).href, targetDurationMs: 115000, minPixelsPerSecond: 14},
+  atmosphere: {
+    width: 640, height: 360, frameMs: 90, foliageAmplitude: 1,
+    foliage: [{x: 0, y: 0, width: 138, height: 170, cycleMs: 5400, phase: 0},
+      {x: 555, y: 35, width: 85, height: 155, cycleMs: 6700, phase: 1.8}],
+    leaf: {max: 6, mobileMax: 2, intervalMs: [2000, 4000], lifeMs: [6000, 10000]},
+    ash: {max: 6, mobileMax: 3, intervalMs: [2000, 4000], lifeMs: [6000, 10000]},
+    spark: {max: 2, mobileMax: 1, intervalMs: [4000, 7000], lifeMs: [3500, 5000]},
+    end: {max: 5, mobileMax: 2, intervalMs: [3000, 5000], lifeMs: [7000, 12000]},
+    mobileWidth: 740, exclusionPadding: 12, spawnAttempts: 24,
+    leafSources: [{x: [8,73],y: [205,245]},{x: [565,636],y: [218,261]}],
+    lavaMinimumY: 0,
+    exclusions: '.game-nav,.sign-rig,.welcome-message,.key-form,.workspace-heading,.nether-frame,.file-toolbar,.analysis-status,.analysis-error,.chat-panel,.workspace-footer,.report-tools,.timeline-preview,.archive-heading,.archive-panel,.end-exit-footer,.credits-scene,dialog[open]',
+  },
+});
+
+

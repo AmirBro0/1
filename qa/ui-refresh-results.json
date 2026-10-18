@@ -1,0 +1,15 @@
+{
+  "checks": [
+    "text-navigation-removed",
+    "camera-only-capability-is-visible",
+    "compatible-with-running-pre-scope-api",
+    "permanent-api-response-and-themed-review",
+    "portrait-preview-contained",
+    "custom-filter-keyboard-and-search",
+    "portal-opens-fullscreen-credits-without-navbar",
+    "credits-return-restores-hud",
+    "desktop-and-mobile-layout"
+  ],
+  "page_errors": [],
+  "missing_assets": []
+}

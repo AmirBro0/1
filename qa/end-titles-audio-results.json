@@ -1,0 +1,32 @@
+{
+  "checks": [
+    "muted by default, no music fetched before a sound gesture",
+    "actual End M4A decodes and fades to 8%",
+    "actual titles M4A decodes and fades to 10%; outgoing End stops",
+    "credits pause immediately silences music; resume restores 10%",
+    "single volume stage: video duck multiplier .30 gives .024 End/.03 titles and restores",
+    "visibility event stops playback and restores the same End position/level",
+    "global mute cancels playback/fades; unmute restores 8%",
+    "old world balance unchanged; quieter saved preference remains a ceiling"
+  ],
+  "errors": [],
+  "media_errors": [],
+  "tracks": {
+    "end": {
+      "volume": 0.08,
+      "duration": 244.875011,
+      "readyState": 4,
+      "currentTime": 0.937609,
+      "playbackRate": 1,
+      "sha256": "d732402e77bec4d6fe649fcfd2b31c499b159c0d18a23e6ad9cd71f560ef40e3"
+    },
+    "titles": {
+      "volume": 0.1,
+      "duration": 603,
+      "readyState": 4,
+      "currentTime": 1.181428,
+      "playbackRate": 1,
+      "sha256": "1ac7f0c4cee9342939fee637ef0f5ed95f3f4ed7b9d43c7bf9e5532fe0c78e5f"
+    }
+  }
+}

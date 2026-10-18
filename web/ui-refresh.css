@@ -1,0 +1,22 @@
+/* Keep the original compact game HUD; scenes provide their own navigation. */
+html[data-world=overworld]{background:#91a7a2}
+.world-backdrop #landscape{background-position:center;background-size:cover}
+[data-world=overworld] .world-backdrop #landscape{background-image:url('./assets/worlds/overworld.png')}
+[data-world=nether] .world-backdrop #landscape{background-image:url('./assets/worlds/nether.png')}
+[data-world=end] .world-backdrop #landscape{background-image:url('./assets/worlds/end.png')}
+[data-world=overworld] .world-backdrop{background:#91a7a2}
+[data-world=overworld] .world-backdrop #landscape{filter:saturate(.92) brightness(.97)}
+[data-world=nether] .world-backdrop #landscape{filter:saturate(.78) brightness(.88)}
+[data-world=end] .world-backdrop #landscape{filter:saturate(.55) brightness(.82)}
+[data-world=overworld] .world-backdrop:after{background:linear-gradient(#c4d1c51f,#c4d1c51a 60%,#172a2124)}
+[data-world=nether] .world-backdrop:after{background:linear-gradient(#160e1933,#160e1940)}
+[data-world=end] .world-backdrop:after{background:linear-gradient(#11111d40,#11111d59)}
+.game-nav{height:70px;min-height:70px}.nav-actions{margin-left:auto}.nav-location{margin-left:auto;margin-right:auto}.nav-links{display:none}
+.game-nav #nav-history{margin-left:8px;background:#4e3865;color:#ead7ff;border-color:#21172d;box-shadow:inset 2px 2px #a88ac5,inset -2px -2px #2b1d3d,0 2px #110c19}
+.game-nav #nav-history:hover{background:#65477e;box-shadow:inset 2px 2px #c3a0e4,inset -2px -2px #3a2850,0 2px #110c19}
+.game-nav #nav-history:focus-visible{outline-color:#d7b7ff}
+.drop-format,.workspace-heading .upload-hint{display:none}.workspace-heading{min-height:95px;margin-bottom:12px}.analysis-scope{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 16px;margin:0 0 22px;color:#c7b5a7;font-size:8px;line-height:2}.scope-label{color:#e7d2a7;font-size:9px}.analysis-scope>span:last-child{font-family:system-ui,sans-serif;font-size:13px;letter-spacing:.01em}
+html[data-world=credits] .game-nav{display:none!important}.credits-scene{height:100svh;min-height:100svh}.credits-controls{top:24px}.credits-content{padding-top:80vh}.credits-scroll.static-credits .credits-content{padding-top:140px}
+html[data-world=credits] main{min-height:100svh}html[data-world=credits] body{overflow:hidden}.credits-scroll{scrollbar-gutter:stable}
+[data-theme=light] .analysis-scope{background:#eee8d7ee;padding:10px 14px;color:#514b45}[data-theme=light] .scope-label{color:#4a352b}
+@media(max-width:740px){.game-nav{height:62px;min-height:62px;padding:0 12px;gap:8px;flex-wrap:nowrap}.nav-left{flex:0 1 auto;min-width:0}.nav-actions{gap:5px}.game-nav .icon-button{height:29px;width:29px;min-height:29px;padding:6px}.game-nav .motion-button{display:none}.nav-location{display:none}.welcome-scene{min-height:calc(100svh - 62px)}.workspace-heading{min-height:80px;margin-bottom:14px}.analysis-scope{gap:5px;margin-bottom:18px}.analysis-scope>span{width:100%}.analysis-scope>span:last-child{font-size:12px}.scope-label{font-size:8px}.credits-scene{height:100svh}.credits-controls{top:15px}.credits-content{padding-top:80vh}}

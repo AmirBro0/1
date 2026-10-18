@@ -1,0 +1,10 @@
+.env
+.git/
+.claude/
+.venv/
+data/
+model/
+private_asset_pack/
+qa/
+**/__pycache__/
+.pytest_cache/

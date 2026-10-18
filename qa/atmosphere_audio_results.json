@@ -1,0 +1,29 @@
+{
+  "errors": [],
+  "checks": [
+    "real M4A playback, zero first volume, fade to .10",
+    "2s portal, original private SFX decoded, UPLOAD only after finish, Nether gain",
+    "video duck <= .03, restore, independent video audio",
+    "mute cancels fades during video, unmute resumes correct track",
+    "26s each world, sparse particles, protected panels, canopy masks, saved position, 2 instances",
+    "loop envelope, hidden tab pause/resume, skip+mute mid-portal, rapid reverse, zero analysis POST",
+    "reduced motion calm transition and mobile resize",
+    "missing track requested once, app still usable",
+    "saved quieter volume is not raised to .03, no autoplay before gesture, original playback rate",
+    "clickable portal mute immediately silences all site channels",
+    "26s revised Nether: particles visible outside protected panels",
+    "UPLOAD stays hidden until assembly begins",
+    "hide and reduced motion during portal settle correctly"
+  ],
+  "nether_observation_seconds": 26,
+  "nether_max_observed": {
+    "ash": 3,
+    "spark": 1
+  },
+  "overworld_observation_seconds": 26,
+  "canopy_mask_pixels": [
+    11682,
+    6004
+  ],
+  "nether_particles_visibly_rendered": true
+}

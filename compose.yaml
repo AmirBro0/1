@@ -1,0 +1,30 @@
+services:
+  api:
+    build: .
+    env_file: .env
+    environment:
+      DATA_DIR: /data
+      EMBEDDED_WORKER: "0"
+    command: ["uvicorn", "app.api:app", "--host", "0.0.0.0", "--port", "8000", "--workers", "1"]
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/data
+    restart: unless-stopped
+  worker:
+    build: .
+    env_file: .env
+    environment:
+      DATA_DIR: /data
+      MODEL_DIR: /model
+      EMBEDDED_WORKER: "0"
+      HF_HUB_OFFLINE: "1"
+      TRANSFORMERS_OFFLINE: "1"
+      HF_HOME: /data/model_cache
+      TORCH_HOME: /data/model_cache
+    command: ["python", "-m", "app.worker"]
+    network_mode: none
+    volumes:
+      - ./data:/data
+      - ./model:/model:ro
+    restart: unless-stopped

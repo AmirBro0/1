@@ -1,14 +1,14 @@
 /* Keep the original compact game HUD; scenes provide their own navigation. */
-html[data-world=overworld]{background:#91a7a2}
+html[data-world=overworld]{background:#373142}
 .world-backdrop #landscape{background-position:center;background-size:cover}
-[data-world=overworld] .world-backdrop #landscape{background-image:url('./assets/worlds/overworld.png')}
+[data-world=overworld] .world-backdrop #landscape{background-image:url('./assets/worlds/cherry-grove.png')}
 [data-world=nether] .world-backdrop #landscape{background-image:url('./assets/worlds/nether.png')}
 [data-world=end] .world-backdrop #landscape{background-image:url('./assets/worlds/end.png')}
-[data-world=overworld] .world-backdrop{background:#91a7a2}
-[data-world=overworld] .world-backdrop #landscape{filter:none}
+[data-world=overworld] .world-backdrop{background:#373142}
+[data-world=overworld] .world-backdrop #landscape{filter:saturate(.86) brightness(.8)}
 [data-world=nether] .world-backdrop #landscape{filter:saturate(.78) brightness(.88)}
 [data-world=end] .world-backdrop #landscape{filter:saturate(.55) brightness(.82)}
-[data-world=overworld] .world-backdrop:after{background:linear-gradient(#c4d1c51f,#c4d1c51a 60%,#172a2124)}
+[data-world=overworld] .world-backdrop:after{background:linear-gradient(#3226381a,#32263800 55%,#21192526)!important}
 [data-world=nether] .world-backdrop:after{background:linear-gradient(#160e1933,#160e1940)}
 [data-world=end] .world-backdrop:after{background:linear-gradient(#11111d40,#11111d59)}
 .game-nav{height:70px;min-height:70px}.nav-actions{margin-left:auto}.nav-location{margin-left:auto;margin-right:auto}.nav-links{display:none}

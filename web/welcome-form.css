@@ -1,0 +1,26 @@
+/* Minecraft's server connection menu, scoped to the welcome scene. */
+.welcome-scene .key-form{width:min(560px,100%);max-width:none;margin:0 auto;text-align:left}
+.welcome-scene .key-form label{margin:0 0 14px;color:#fff5f6;font:400 15px/1.6 Pixel,monospace;letter-spacing:0;text-shadow:2px 2px #30222c}
+.welcome-scene .key-field{height:56px;border:2px solid #ebe6e8;outline:2px solid #161216;box-shadow:inset 1px 1px #51474e;background:#090809;color:#fff;transition:none}
+.welcome-scene .key-field:focus-within{outline:2px solid #fff4fa;outline-offset:3px}
+.welcome-scene .key-field input{min-width:0;width:100%;height:100%;padding:10px 14px;border:0;border-radius:0;background:transparent;color:#fff4fa;font:400 16px/1.5 Pixel,monospace;letter-spacing:1px;box-shadow:none;outline:none;caret-color:#fff4fa}
+.welcome-scene .welcome-menu-button{display:flex;width:100%;height:52px;min-height:52px;margin:14px 0 0;padding:10px 12px;border:2px solid #1a141a;border-radius:0;background:#99949a;box-shadow:inset 2px 2px #ded8dd,inset -2px -2px #565058,0 2px #120f14;color:#fff;font:400 16px/1.5 Pixel,monospace;letter-spacing:0;text-shadow:2px 2px #3c343e;transition:none}
+.welcome-scene .start-button{margin-top:44px}
+.welcome-scene .welcome-menu-button:hover:not(:disabled){background:#afa5b0;box-shadow:inset 2px 2px #f1e5ee,inset -2px -2px #6c5e70,0 2px #120f14;color:#fff}
+.welcome-scene .welcome-menu-button:active:not(:disabled){background:#8d818e;box-shadow:inset 2px 2px #645768,inset -2px -2px #c5b8c9,0 2px #120f14}
+.welcome-scene .welcome-menu-button:focus-visible{outline:2px solid #fff0f7;outline-offset:3px}
+.welcome-scene .welcome-menu-button:disabled{background:#6d666f;color:#c9bfca;text-shadow:2px 2px #332a37;box-shadow:inset 2px 2px #8b818e,inset -2px -2px #48404c,0 2px #120f14}
+.welcome-scene .form-error{margin:16px 0 0;padding:10px 12px;background:#321e2bef;border-left:3px solid #cf8f9f;color:#ffe1e9;font-size:10px;line-height:2;text-shadow:none}
+@media(max-width:740px){
+  .welcome-scene .key-form{width:min(560px,100%)}
+  .welcome-scene .key-form label{font-size:12px;margin-bottom:12px}
+  .welcome-scene .key-field{height:52px}
+  .welcome-scene .key-field input{font-size:13px;padding:10px 12px}
+  .welcome-scene .welcome-menu-button{font-size:13px;height:48px;min-height:48px}
+  .welcome-scene .start-button{margin-top:34px}
+  .welcome-scene .form-error{font-size:9px}
+}
+@media(max-width:360px){
+  .welcome-scene .key-form label{font-size:11px}
+  .welcome-scene .welcome-menu-button{font-size:12px}
+}

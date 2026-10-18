@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 96" shape-rendering="crispEdges">
+  <title>OKO</title>
+  <defs>
+    <path id="letters" fill-rule="evenodd" d="M19 9h58v8h8v55h-8v8H19v-8h-8V17h8zm14 20v31h30V29zm78-20h21v27h12V24h12V9h23v20h-12v12h-12v10h12v12h12v17h-24V68h-12V56h-11v24h-21zm102 0h58v8h8v55h-8v8h-58v-8h-8V17h8zm14 20v31h30V29z"/>
+  </defs>
+  <g transform="translate(12)">
+    <!-- Flat painted capitals with only a small warm offset on the oak. -->
+    <use href="#letters" transform="translate(1 2)" fill="#9a704c" opacity=".4"/>
+    <use href="#letters" fill="#3c302a"/>
+    <!-- Muted camera eyes preserve the two O glyphs without metallic depth. -->
+    <path fill="#4b5b48" d="M33 29h30v31H33zm194 0h30v31h-30z"/>
+    <path fill="#263e31" d="M45 29h8v31h-8zm194 0h8v31h-8z"/>
+    <path fill="#b7bb91" d="M45 31h4v4h-4zm194 0h4v4h-4z"/>
+  </g>
+</svg>

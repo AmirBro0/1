@@ -98,16 +98,20 @@ for(const [id,world]of [['nav-home','overworld'],['nav-analysis','nether'],['nav
 $('back-button').addEventListener('click',()=>navigate(state.world==='end'?'nether':'overworld').catch(showError));
 $('brand-link').addEventListener('click',event=>{event.preventDefault();navigate('overworld').catch(showError);});
 $('end-exit-button')?.addEventListener('click',async()=>{try{await navigate('credits');await credits.start();}catch(error){showError(error);}});
-$('key-visibility').addEventListener('click',()=>{const visible=$('api-key').type==='password';$('api-key').type=visible?'text':'password';$('key-visibility').setAttribute('aria-label',visible?'Скрыть ключ':'Показать ключ');});
+$('key-visibility')?.addEventListener('click',()=>{const visible=$('api-key').type==='password';$('api-key').type=visible?'text':'password';$('key-visibility').setAttribute('aria-label',visible?'Скрыть ключ':'Показать ключ');});
+$('welcome-cancel').addEventListener('click',()=>{
+  if($('start-button').disabled)return;
+  $('api-key').value='';$('api-key').type='password';$('welcome-error').hidden=true;$('welcome-error').textContent='';state.authTarget='nether';$('api-key').focus({preventScroll:true});
+});
 const originalStart=$('start-button').innerHTML;
 $('welcome-form').addEventListener('submit',async event=>{
   event.preventDefault();if($('start-button').disabled)return;
-  const key=$('api-key').value.trim();if(!key&&state.authenticated){await navigate('nether');return;}if(!key)return;$('welcome-error').hidden=true;$('start-button').disabled=true;$('start-button').textContent='ПРОВЕРКА ДОСТУПА…';
+  const key=$('api-key').value.trim();if(!key&&state.authenticated){await navigate('nether');return;}if(!key)return;$('welcome-error').hidden=true;$('start-button').disabled=true;$('welcome-cancel').disabled=true;$('start-button').textContent='ПРОВЕРКА ДОСТУПА…';
   try{
     const info=await request('/ui/v1/session',{method:'POST',body:{api_key:key}});state.apiKey=key;setAuthenticated(true);applyCapabilities(info);$('api-key').value='';
     await afterLogin(state.authTarget||'nether');state.authTarget=null;
   }catch(error){$('welcome-error').textContent=error.message;$('welcome-error').hidden=false;}
-  finally{$('start-button').innerHTML=originalStart;$('start-button').disabled=false;}
+  finally{$('start-button').innerHTML=originalStart;$('start-button').disabled=false;$('welcome-cancel').disabled=false;}
 });
 
 function selectFile(file){

@@ -51,7 +51,7 @@ export class Worlds {
       const img=new Image();
       img.onload=()=>{this.images[world]=img;if(world==='nether')this.prepareLava(img);if(world===this.world){this.backgroundWorld=null;this.drawBackground();}resolve();};
       img.onerror=()=>resolve();
-      img.src=new URL('./assets/worlds/'+world+'.png',import.meta.url).href;
+      img.src=new URL('./assets/worlds/'+(world==='overworld'?'cherry-grove':world)+'.png',import.meta.url).href;
     })));
     this.theme=readPreference('forte-theme')==='light'?'light':'dark';
     const themeButton=document.getElementById('theme-toggle');
@@ -86,7 +86,7 @@ export class Worlds {
       ctx.drawImage(image,0,0,width,height);
       ctx.imageSmoothingEnabled=false;
     }else{
-      rect(ctx,this.world==='overworld'?'#91a7a2':this.world==='nether'?'#260e16':'#100d1b',0,0,width,height);
+      rect(ctx,this.world==='overworld'?'#373142':this.world==='nether'?'#260e16':'#100d1b',0,0,width,height);
     }
   }
   prepareLava(img){
@@ -157,9 +157,9 @@ export class Worlds {
       const y=Math.round(p.y+(p.type==='leaf'?30:p.type==='spark'?-24:-12)*age);
       ctx.globalAlpha=Math.min(1,age*7,(1-age)*5)*(p.type==='leaf'?.8:p.type==='spark'?.55:.45);
       if(p.type==='leaf'){
-        const pose=Math.floor(age*9)%4;ctx.fillStyle='#4d7936';
-        if(pose%2){ctx.fillRect(x,y,1,3);ctx.fillStyle='#96ad45';ctx.fillRect(x+1,y+1,1,1);}
-        else{ctx.fillRect(x,y,3,2);ctx.fillStyle='#96ad45';ctx.fillRect(x+(pose===0?0:2),y,1,1);}
+        const pose=Math.floor(age*9)%4;ctx.fillStyle='#c78ea7';
+        if(pose%2){ctx.fillRect(x,y,1,3);ctx.fillStyle='#efd1dc';ctx.fillRect(x+1,y+1,1,1);}
+        else{ctx.fillRect(x,y,3,2);ctx.fillStyle='#efd1dc';ctx.fillRect(x+(pose===0?0:2),y,1,1);}
       }else{ctx.fillStyle=p.type==='spark'?'#e9a15c':p.type==='end'?'#a98ccd':'#b4aa9b';ctx.fillRect(x,y,1,p.type==='spark'?2:1);}
     }
     ctx.globalAlpha=1;
@@ -180,7 +180,7 @@ export class Worlds {
     back.disabled=world==='overworld'||this.transitioning;
     const backLabel=world==='end'?'Назад в Nether':'Назад в Overworld';
     back.setAttribute('aria-label',backLabel);back.title=backLabel;
-    document.querySelector('meta[name=theme-color]').content=world==='overworld'?'#91a7a2':world==='nether'?'#160e15':'#100d1b';
+    document.querySelector('meta[name=theme-color]').content=world==='overworld'?'#373142':world==='nether'?'#160e15':'#100d1b';
     for(const [id,value] of [['nav-home','overworld'],['nav-analysis','nether'],['nav-history','end']])document.getElementById(id)?.setAttribute('aria-current',value===world?'page':'false');
     this.drawBackground();this.measureExclusions();this.drawEffects();this.onChange(world);this.audio.setWorld(world);
   }

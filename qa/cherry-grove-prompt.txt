@@ -1,0 +1,12 @@
+Generated with the built-in image_gen.imagegen tool on 2026-10-18.
+Asset: web/assets/worlds/cherry-grove.png
+Mode: new image generation, no input image.
+Use case: stylized-concept
+
+Use case: stylized-concept
+Asset type: original 16:9 landscape background panorama for a pixel-art voxel game's welcome menu, image only with no interface.
+Primary request: a tranquil cherry grove biome at a soft sunset, crafted as authentic crisp low-resolution pixel art with chunky block terrain and cubic trees, inspired by the readable block language of Minecraft.
+Scene: large recognizable pale-pink and dusty-rose cherry tree canopies frame the left and right sides; dark muted plum-brown square trunks; stepped grassy terraces in the foreground with a few tiny cherry petals, distant rolling block hills, a quiet open center valley and open central sky for an overlay menu. Horizon near the middle. The composition must remain readable behind a wooden sign in the upper center and a login form in the center.
+Style: visibly square pixel clusters, deliberate flat color ramps, simple 640x360-style game-art pixel grid scaled cleanly, hard pixel edges, blocky voxel geometry drawn in pixel art, sparse intentional texture. No photographic rendering or illustrated brushwork.
+Lighting and palette: calm late sunset with soft peach along the horizon and muted lavender-blue higher sky, dusty cherry pink foliage, subdued moss-green grass, restrained warm highlights, medium-low contrast and moderate saturation. Gentle atmospheric depth using limited flat pixel color bands; no blur. Colorful enough to recognize the cherry biome but easy on the eyes.
+Constraints: wide 16:9 frame; no people, animals, houses, signs, lettering, logos, UI, icons, border, watermark, portal, or dramatic sun glare. Keep central upper and middle area visually quiet. Avoid neon colors, busy microtexture, high-frequency noise, smooth vector gradients, painterly strokes, photorealism, lens effects, glossy 3D render, blur, and oversaturated magenta.

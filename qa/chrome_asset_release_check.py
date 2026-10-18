@@ -197,17 +197,17 @@ def main():
                 report["appearance"] = appearance
                 check(appearance["fontLoaded"] and "Pixel" in appearance["font"],
                       "Pixel font is loaded and used by the body")
-                check(prefix in appearance["wood"] and "wood.svg" in appearance["wood"],
+                check(prefix in appearance["wood"] and "oak-sign.svg" in appearance["wood"],
                       "Wooden sign texture resolves inside the current release")
-                check(prefix in appearance["fallback"] and "overworld.png" in appearance["fallback"],
-                      "Overworld CSS background resolves inside the current release")
-                check(appearance["canvas"] == [640, 360], "JavaScript painted the original 640×360 Overworld background")
+                check(prefix in appearance["fallback"] and "cherry-grove.png" in appearance["fallback"],
+                      "Cherry grove CSS background resolves inside the current release")
+                check(appearance["canvas"] == [640, 360], "JavaScript painted the 640×360 cherry grove background")
                 check(appearance["logoLoaded"] and prefix in appearance["logo"],
                       "The released oko wordmark loaded successfully")
                 with urlopen(upstream + urlsplit(appearance["logo"]).path, timeout=20) as logo_response:
                     logo = logo_response.read().decode("utf-8")
-                check("#f4d994" in logo and "#d7a75a" in logo,
-                      "The current wordmark contains its gold face colors")
+                check("#3c302a" in logo and "#263e31" in logo,
+                      "The painted sign lettering retains its dark capitals and green eyes")
                 for key in ("styles", "scripts", "configuredAssets"):
                     check(bool(appearance[key]) and all(urlsplit(url).path.startswith(prefix)
                                                        for url in appearance[key]),
@@ -231,7 +231,7 @@ def main():
                 no_js_page = no_js_context.new_page()
                 no_js_page.goto(origin + "/", wait_until="networkidle")
                 no_js = no_js_page.locator("#landscape").evaluate("el=>getComputedStyle(el).backgroundImage")
-                check(prefix in no_js and "overworld.png" in no_js,
+                check(prefix in no_js and "cherry-grove.png" in no_js,
                       "CSS still supplies the landscape when JavaScript is unavailable")
                 check(bool(no_js_page.locator("#typed-message").inner_text()),
                       "The greeting remains readable without JavaScript")

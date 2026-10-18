@@ -1,0 +1,412 @@
+{
+  "url": "http://127.0.0.1:8766/",
+  "passed": true,
+  "screens": {
+    "1920": {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "scrollWidth": 1920,
+      "scrollHeight": 1080,
+      "sign": {
+        "x": 520,
+        "y": 293.890625,
+        "width": 880,
+        "height": 256.796875,
+        "right": 1400,
+        "bottom": 550.6875
+      },
+      "greeting": {
+        "x": 490,
+        "y": 571.890625,
+        "width": 940,
+        "height": 34,
+        "right": 1430,
+        "bottom": 605.890625
+      },
+      "form": {
+        "x": 680,
+        "y": 627.890625,
+        "width": 560,
+        "height": 256,
+        "right": 1240,
+        "bottom": 883.890625
+      },
+      "caption": {
+        "x": 0,
+        "y": 1037.90625,
+        "width": 1920,
+        "height": 17.09375,
+        "right": 1920,
+        "bottom": 1055
+      },
+      "input": {
+        "x": 682,
+        "y": 667.890625,
+        "width": 556,
+        "height": 52,
+        "right": 1238,
+        "bottom": 719.890625
+      },
+      "field": {
+        "x": 680,
+        "y": 665.890625,
+        "width": 560,
+        "height": 56,
+        "right": 1240,
+        "bottom": 721.890625
+      },
+      "connect": {
+        "x": 680,
+        "y": 765.890625,
+        "width": 560,
+        "height": 52,
+        "right": 1240,
+        "bottom": 817.890625
+      },
+      "cancel": {
+        "x": 680,
+        "y": 831.890625,
+        "width": 560,
+        "height": 52,
+        "right": 1240,
+        "bottom": 883.890625
+      },
+      "placeholder": null,
+      "value": "",
+      "adornments": 0,
+      "fieldColor": "rgb(9, 8, 9)",
+      "signBackground": "url(\"http://127.0.0.1:8766/_ui/d599f26df387ec4e/assets/textures/oak-sign.svg\")",
+      "fallback": "url(\"http://127.0.0.1:8766/_ui/d599f26df387ec4e/assets/worlds/cherry-grove.png\")",
+      "font": "Pixel, monospace",
+      "wordmark": "http://127.0.0.1:8766/_ui/d599f26df387ec4e/assets/branding/oko-sign-lettering.svg",
+      "screenshot": "C:\\Users\\Маркет\\.codex\\.chatgpt-projects\\g-p-6ad3d33c21b48191b3ef155d3e5fa762\\fortebank-video-audit\\qa\\cherry-welcome-1920.png",
+      "loaded_cherry": true,
+      "loaded_oak": true
+    },
+    "1366": {
+      "viewport": [
+        1366,
+        768
+      ],
+      "scrollWidth": 1366,
+      "scrollHeight": 836,
+      "sign": {
+        "x": 263,
+        "y": 179.796875,
+        "width": 840,
+        "height": 236.796875,
+        "right": 1103,
+        "bottom": 416.59375
+      },
+      "greeting": {
+        "x": 213,
+        "y": 441.796875,
+        "width": 940,
+        "height": 34,
+        "right": 1153,
+        "bottom": 475.796875
+      },
+      "form": {
+        "x": 403,
+        "y": 497.796875,
+        "width": 560,
+        "height": 256,
+        "right": 963,
+        "bottom": 753.796875
+      },
+      "caption": {
+        "x": 0,
+        "y": 793.703125,
+        "width": 1366,
+        "height": 17.09375,
+        "right": 1366,
+        "bottom": 810.796875
+      },
+      "input": {
+        "x": 405,
+        "y": 537.796875,
+        "width": 556,
+        "height": 52,
+        "right": 961,
+        "bottom": 589.796875
+      },
+      "field": {
+        "x": 403,
+        "y": 535.796875,
+        "width": 560,
+        "height": 56,
+        "right": 963,
+        "bottom": 591.796875
+      },
+      "connect": {
+        "x": 403,
+        "y": 635.796875,
+        "width": 560,
+        "height": 52,
+        "right": 963,
+        "bottom": 687.796875
+      },
+      "cancel": {
+        "x": 403,
+        "y": 701.796875,
+        "width": 560,
+        "height": 52,
+        "right": 963,
+        "bottom": 753.796875
+      },
+      "placeholder": null,
+      "value": "",
+      "adornments": 0,
+      "fieldColor": "rgb(9, 8, 9)",
+      "signBackground": "url(\"http://127.0.0.1:8766/_ui/d599f26df387ec4e/assets/textures/oak-sign.svg\")",
+      "fallback": "url(\"http://127.0.0.1:8766/_ui/d599f26df387ec4e/assets/worlds/cherry-grove.png\")",
+      "font": "Pixel, monospace",
+      "wordmark": "http://127.0.0.1:8766/_ui/d599f26df387ec4e/assets/branding/oko-sign-lettering.svg",
+      "screenshot": "C:\\Users\\Маркет\\.codex\\.chatgpt-projects\\g-p-6ad3d33c21b48191b3ef155d3e5fa762\\fortebank-video-audit\\qa\\cherry-welcome-1366.png",
+      "loaded_cherry": true,
+      "loaded_oak": true
+    },
+    "390": {
+      "viewport": [
+        390,
+        844
+      ],
+      "scrollWidth": 390,
+      "scrollHeight": 844,
+      "sign": {
+        "x": 18,
+        "y": 217.59375,
+        "width": 354,
+        "height": 188.65625,
+        "right": 372,
+        "bottom": 406.25
+      },
+      "greeting": {
+        "x": 18,
+        "y": 429.59375,
+        "width": 354,
+        "height": 40,
+        "right": 372,
+        "bottom": 469.59375
+      },
+      "form": {
+        "x": 18,
+        "y": 489.59375,
+        "width": 354,
+        "height": 227.1875,
+        "right": 372,
+        "bottom": 716.78125
+      },
+      "caption": {
+        "x": 0,
+        "y": 804.8125,
+        "width": 390,
+        "height": 15.1875,
+        "right": 390,
+        "bottom": 820
+      },
+      "input": {
+        "x": 20,
+        "y": 522.78125,
+        "width": 350,
+        "height": 48,
+        "right": 370,
+        "bottom": 570.78125
+      },
+      "field": {
+        "x": 18,
+        "y": 520.78125,
+        "width": 354,
+        "height": 52,
+        "right": 372,
+        "bottom": 572.78125
+      },
+      "connect": {
+        "x": 18,
+        "y": 606.78125,
+        "width": 354,
+        "height": 48,
+        "right": 372,
+        "bottom": 654.78125
+      },
+      "cancel": {
+        "x": 18,
+        "y": 668.78125,
+        "width": 354,
+        "height": 48,
+        "right": 372,
+        "bottom": 716.78125
+      },
+      "placeholder": null,
+      "value": "",
+      "adornments": 0,
+      "fieldColor": "rgb(9, 8, 9)",
+      "signBackground": "url(\"http://127.0.0.1:8766/_ui/d599f26df387ec4e/assets/textures/oak-sign.svg\")",
+      "fallback": "url(\"http://127.0.0.1:8766/_ui/d599f26df387ec4e/assets/worlds/cherry-grove.png\")",
+      "font": "Pixel, monospace",
+      "wordmark": "http://127.0.0.1:8766/_ui/d599f26df387ec4e/assets/branding/oko-sign-lettering.svg",
+      "screenshot": "C:\\Users\\Маркет\\.codex\\.chatgpt-projects\\g-p-6ad3d33c21b48191b3ef155d3e5fa762\\fortebank-video-audit\\qa\\cherry-welcome-390.png",
+      "loaded_cherry": true,
+      "loaded_oak": true
+    },
+    "320": {
+      "viewport": [
+        320,
+        568
+      ],
+      "scrollWidth": 320,
+      "scrollHeight": 748,
+      "sign": {
+        "x": 18,
+        "y": 170.390625,
+        "width": 284,
+        "height": 169.765625,
+        "right": 302,
+        "bottom": 340.15625
+      },
+      "greeting": {
+        "x": 18,
+        "y": 382.390625,
+        "width": 284,
+        "height": 40,
+        "right": 302,
+        "bottom": 422.390625
+      },
+      "form": {
+        "x": 18,
+        "y": 442.390625,
+        "width": 284,
+        "height": 225.59375,
+        "right": 302,
+        "bottom": 667.984375
+      },
+      "caption": {
+        "x": 0,
+        "y": 708.796875,
+        "width": 320,
+        "height": 15.1875,
+        "right": 320,
+        "bottom": 723.984375
+      },
+      "input": {
+        "x": 20,
+        "y": 473.984375,
+        "width": 280,
+        "height": 48,
+        "right": 300,
+        "bottom": 521.984375
+      },
+      "field": {
+        "x": 18,
+        "y": 471.984375,
+        "width": 284,
+        "height": 52,
+        "right": 302,
+        "bottom": 523.984375
+      },
+      "connect": {
+        "x": 18,
+        "y": 557.984375,
+        "width": 284,
+        "height": 48,
+        "right": 302,
+        "bottom": 605.984375
+      },
+      "cancel": {
+        "x": 18,
+        "y": 619.984375,
+        "width": 284,
+        "height": 48,
+        "right": 302,
+        "bottom": 667.984375
+      },
+      "placeholder": null,
+      "value": "",
+      "adornments": 0,
+      "fieldColor": "rgb(9, 8, 9)",
+      "signBackground": "url(\"http://127.0.0.1:8766/_ui/d599f26df387ec4e/assets/textures/oak-sign.svg\")",
+      "fallback": "url(\"http://127.0.0.1:8766/_ui/d599f26df387ec4e/assets/worlds/cherry-grove.png\")",
+      "font": "Pixel, monospace",
+      "wordmark": "http://127.0.0.1:8766/_ui/d599f26df387ec4e/assets/branding/oko-sign-lettering.svg",
+      "screenshot": "C:\\Users\\Маркет\\.codex\\.chatgpt-projects\\g-p-6ad3d33c21b48191b3ef155d3e5fa762\\fortebank-video-audit\\qa\\cherry-welcome-320.png",
+      "loaded_cherry": true,
+      "loaded_oak": true
+    }
+  },
+  "checks": [
+    "1920x1080: no overlaps/overflow; loaded cherry/oak; empty plain black field; full-width buttons",
+    "1366x768: no overlaps/overflow; loaded cherry/oak; empty plain black field; full-width buttons",
+    "390x844: no overlaps/overflow; loaded cherry/oak; empty plain black field; full-width buttons",
+    "320x568: no overlaps/overflow; loaded cherry/oak; empty plain black field; full-width buttons",
+    "Cancel clears invalid input/error, focuses field, makes no API request",
+    "Keyboard Tab order: field, Connect, Cancel",
+    "Successful synthetic authentication opens Nether after Cancel resets prior End auth target",
+    "Nether to End arrow, then End to Nether to Overworld back navigation"
+  ],
+  "errors": [],
+  "bad_assets": [],
+  "api_requests": [
+    {
+      "method": "GET",
+      "path": "/ui/v1/session"
+    },
+    {
+      "method": "GET",
+      "path": "/ui/v1/session"
+    },
+    {
+      "method": "GET",
+      "path": "/ui/v1/session"
+    },
+    {
+      "method": "GET",
+      "path": "/ui/v1/session"
+    },
+    {
+      "method": "GET",
+      "path": "/ui/v1/session"
+    },
+    {
+      "method": "POST",
+      "path": "/ui/v1/session"
+    },
+    {
+      "method": "POST",
+      "path": "/ui/v1/session"
+    },
+    {
+      "method": "GET",
+      "path": "/ui/v1/runs"
+    },
+    {
+      "method": "GET",
+      "path": "/ui/v1/runs"
+    },
+    {
+      "method": "GET",
+      "path": "/ui/v1/session"
+    },
+    {
+      "method": "POST",
+      "path": "/ui/v1/session"
+    },
+    {
+      "method": "POST",
+      "path": "/ui/v1/session"
+    },
+    {
+      "method": "GET",
+      "path": "/ui/v1/runs"
+    },
+    {
+      "method": "GET",
+      "path": "/ui/v1/runs"
+    },
+    {
+      "method": "GET",
+      "path": "/ui/v1/runs"
+    }
+  ]
+}

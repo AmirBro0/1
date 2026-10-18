@@ -1,13 +1,17 @@
-/* Larger welcome sign and lettering, with room for the access form below. */
+/* A simple oak hanging sign against the cherry grove. */
 .welcome-scene{padding:28px 30px 82px}
 .welcome-scene .intro-composition{width:min(940px,100%)}
-.welcome-scene .scene-eyebrow{font-size:11px}
-.welcome-scene .sign-rig{width:min(840px,100%);height:318px}
-.welcome-scene .wood-sign{padding:22px 28px 23px}
+.welcome-scene .scene-eyebrow{font-size:11px;color:#f0e6ec;text-shadow:2px 2px #352a3b}
+.welcome-scene .scene-eyebrow>span{background:#d8c8d56e}
+.welcome-scene .sign-rig{width:min(840px,100%);height:288px}
+.welcome-scene .wood-beam,.welcome-scene .sign-rivet,.welcome-scene .wood-sign:after{display:none}
+.welcome-scene .sign-chain{top:0;width:12px;height:48px;border:0;box-shadow:none;background:url('./assets/textures/sign-chain.svg') center top/12px 16px repeat-y}
+.welcome-scene .sign-chain.left{left:18%}.welcome-scene .sign-chain.right{right:18%}
+.welcome-scene .wood-sign{top:44px;padding:20px 28px 21px;background:#c49a64 url('./assets/textures/oak-sign.svg') center/100% 100%;border:3px solid #745334;box-shadow:inset 1px 1px #e3bf88,inset -1px -1px #a77c4b,3px 4px #32251fd9;animation:none;color:#3c302a}
 .welcome-scene .wood-sign h1{width:min(440px,82%);margin:12px auto 8px;line-height:1;text-shadow:none;letter-spacing:0}
 .oko-wordmark{display:block;width:100%;height:auto;image-rendering:pixelated}
-.welcome-scene .sign-overline,.welcome-scene .sign-subtitle{font-size:10px;letter-spacing:2px}
-.welcome-scene .welcome-message{font-size:12px;line-height:1.9;min-height:34px;margin:18px 0 22px}
+.welcome-scene .sign-overline,.welcome-scene .sign-subtitle{font-size:10px;letter-spacing:2px;color:#533d2c;text-shadow:none}
+.welcome-scene .welcome-message{font-size:12px;line-height:1.9;min-height:34px;margin:18px 0 22px;color:#f3e9ed;text-shadow:2px 2px #302635}
 .welcome-scene .key-form{width:min(560px,100%)}
 .welcome-scene .key-form label{font-size:11px}
 .welcome-scene .key-field{height:68px}
@@ -16,20 +20,25 @@
 .welcome-scene .start-button{font-size:17px;height:66px}
 .welcome-scene .next-hint{font-size:11px;line-height:1.8}
 .welcome-scene .form-error{font-size:11px}
-.welcome-scene .world-caption{font-size:9px;line-height:1.9;padding:0 18px}
+.welcome-scene .world-caption{font-size:9px;line-height:1.9;padding:0 18px;color:#eee2e6;text-shadow:2px 2px #302635}
+html[data-world=overworld] .game-nav{background:#2a232de8;color:#f0e7ea;box-shadow:0 3px #17131c80}
+html[data-world=overworld] .game-nav .game-button{background:#514951;border-color:#211b25;box-shadow:inset 2px 2px #95848e,inset -2px -2px #332b36,0 2px #17121c}
+html[data-world=overworld] .game-nav .game-button:hover:not(:disabled){background:#685a66}
+html[data-world=overworld] .brand-gem{background:#dfafc3;box-shadow:inset -5px -5px #a16c86}
+html[data-world=overworld] .location-dot{background:#dfb3c8;box-shadow:none}
 html[data-world=overworld] .nav-brand{font-size:13px}
 html[data-world=overworld] .nav-location{font-size:9px}
 html[data-world=overworld] .nav-world{font-size:8px}
 @media(min-width:1600px){
-  .welcome-scene .sign-rig{width:880px;max-width:100%;height:336px}
-  .welcome-scene .wood-sign{padding-top:26px;padding-bottom:27px}
+  .welcome-scene .sign-rig{width:880px;max-width:100%;height:304px}
+  .welcome-scene .wood-sign{padding-top:24px;padding-bottom:25px}
   .welcome-scene .wood-sign h1{width:480px;max-width:82%}
 }
 @media(max-width:740px){
   .welcome-scene{padding:32px 18px 80px}
   .welcome-scene .scene-eyebrow{font-size:8px;margin-bottom:18px}
-  .welcome-scene .sign-rig{width:100%;height:252px}
-  .welcome-scene .wood-sign{padding:24px 12px 21px}
+  .welcome-scene .sign-rig{width:100%;height:238px}
+  .welcome-scene .wood-sign{padding:22px 12px 19px}
   .welcome-scene .wood-sign h1{width:min(320px,90%);margin:12px auto 8px}
   .welcome-scene .sign-overline,.welcome-scene .sign-subtitle{font-size:8px;letter-spacing:1.2px}
   .welcome-scene .welcome-message{font-size:10px;min-height:40px;margin:18px 0 20px}

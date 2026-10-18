@@ -49,7 +49,7 @@
       "path": "web/assets/worlds/overworld.png",
       "source": "Built-in image_gen for this project",
       "version": "2026-10-18",
-      "usage": "Active original Overworld composition; averaged to 480x270 at render time, background-only CSS saturation 0.92 and brightness 0.97 plus neutral overlay; original bytes unchanged",
+      "usage": "Previous Overworld composition, retained as an unused alternative; original bytes unchanged",
       "sha256": "8f32914e9e043ddf654dbe5c309ab5368ce95624b5512555ff3669e5470cb9a3"
     },
     {
@@ -77,8 +77,36 @@
       "path": "web/assets/branding/oko-wordmark.svg",
       "source": "Original project-authored pixel vector wordmark",
       "version": "2026-10-18",
-      "usage": "Expressive oko welcome sign; gold block depth and subtle eye motifs; no external font or bitmap generation",
+      "usage": "Previous gold uppercase OKO logo, retained as an unused alternative",
       "sha256": "b6c6d163c1f96d09138ab6e6f9e217d5020479a09bff35e35c0534c2b2284cbe"
+    },
+    {
+      "path": "web/assets/worlds/cherry-grove.png",
+      "source": "Built-in image_gen for this project",
+      "version": "2026-10-18",
+      "usage": "Active original pixel-art cherry grove at sunset; full final prompt in qa/cherry-grove-prompt.txt; displayed at 640x360, background saturation 0.86 and brightness 0.8",
+      "sha256": "4e369924b2acc11eafe29c5b79f6e9036b8b40875ffbee1b117a65abf666992c"
+    },
+    {
+      "path": "web/assets/textures/oak-sign.svg",
+      "source": "Original project-authored SVG",
+      "version": "2026-10-18",
+      "usage": "Active simple oak plank texture for the hanging sign; no game asset copied",
+      "sha256": "7884b113957127387f36e8349cbc1728f34ca15e55d66038dfc19461f8c1bfc2"
+    },
+    {
+      "path": "web/assets/textures/sign-chain.svg",
+      "source": "Original project-authored SVG",
+      "version": "2026-10-18",
+      "usage": "Original pixel chain links for the hanging sign; no game asset copied",
+      "sha256": "bacf8fdd96a9443fcb8444c71f778f0f6774eb6f0ec94789de02d07558deb7e0"
+    },
+    {
+      "path": "web/assets/branding/oko-sign-lettering.svg",
+      "source": "Original project-authored SVG variant",
+      "version": "2026-10-18",
+      "usage": "Active flat painted uppercase OKO lettering with green camera eyes",
+      "sha256": "6896050793cde127bd6ada6f0ec2422308215791a7274352651f4d21dde20d04"
     }
   ],
   "inline_assets": [
